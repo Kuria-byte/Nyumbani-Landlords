@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddUpdateBuilding.aspx" />
     <Content Include="assets\css\dashlite.css" />
     <Content Include="assets\css\dashlite.min.css" />
     <Content Include="assets\css\dashlite.rtl.css" />
@@ -699,6 +700,13 @@
     <Content Include="scss\_dashlite_variables.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUpdateBuilding.aspx.cs">
+      <DependentUpon>AddUpdateBuilding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUpdateBuilding.aspx.designer.cs">
+      <DependentUpon>AddUpdateBuilding.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Dashboard.aspx.cs">

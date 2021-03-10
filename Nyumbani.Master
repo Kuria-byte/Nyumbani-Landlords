@@ -60,7 +60,7 @@
                                         </a>
                                     </li>--%>
                                     <!-- .nk-menu-item -->
-                                    <li class="nk-menu-heading">
+                            <%--        <li class="nk-menu-heading">
                                         <h6 class="overline-title text-primary-alt">Dashboard</h6>
                                     </li>
                                     <!-- .nk-menu-item -->
@@ -69,7 +69,7 @@
                                             <span class="nk-menu-icon"><em class="icon ni ni-cart-fill"></em></span>
                                             <span class="nk-menu-text">Default</span>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <!-- .nk-menu-item -->
                                  
                                     <!-- .nk-menu-item -->
