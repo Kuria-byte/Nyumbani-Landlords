@@ -20,8 +20,8 @@ namespace Nyumbani_Landlords
                 {
                     if (Request.QueryString["lid"] != null)
                     {
-                        strLID = "8";
-                        //strLID = ClassLibrary_PropertyManager.UtilityClasses.ucEDOperations.DecryptString(ClassLibrary_PropertyManager.Global.gEDKey, Convert.ToString(Request.QueryString["lid"].Replace(" ", "+")));
+
+                        strLID = ClassLibrary_PropertyManager.UtilityClasses.ucEDOperations.DecryptString(ClassLibrary_PropertyManager.Global.gEDKey, Convert.ToString(Request.QueryString["lid"].Replace(" ", "+")));
                         int iSuccess = ClassLibrary_PropertyManager.Controller.cLandLords.UpdateLandlordrFromEmail(Convert.ToInt32(strLID));
 
                         if (iSuccess > 0)
@@ -86,6 +86,7 @@ namespace Nyumbani_Landlords
                             }
                             else
                             {
+                                Session["LandLordID"] = collectmLandLords.LandLordID;
                                 Session["LandLordInfo"] = collectmLandLords;
                                 Response.Redirect("Dashboard.aspx", false);
                             }

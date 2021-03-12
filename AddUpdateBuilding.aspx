@@ -17,69 +17,82 @@
                         <!-- .nk-block -->
                         <div class="nk-block nk-block-lg">
                             <div class="nk-block-head">
-                                <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Home</span></a></div>
+                                <div class="nk-block-head-sub"><a class="back-to" href="/"><em class="icon ni ni-arrow-left"></em><span>Home</span></a></div>
 
                                 <div class="nk-block-head-content">
                                     <h4 class="title nk-block-title">Manage Building</h4>
                                     <div class="nk-block-des">
                                     </div>
                                 </div>
+
+                                <%--  Alerts--%>
+                                <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
+                                    <div class="alert alert-fill alert-success alert-icon">
+                                        <em class="icon ni ni-check-circle"></em><strong>Building information saved</strong>> successfully
+                                    </div>
+                                </div>
+                                <div class="example-alert" id="divMsgError" visible="false" runat="server">
+                                    <div class="alert alert-fill alert-warning alert-icon">
+                                        <em class="icon ni ni-alert-circle"></em><strong>Oops!</strong> error occured while adding building information.
+                     
+                                    </div>
+                                </div>
                             </div>
                             <div class="card">
                                 <div class="card-inner">
-                                    <form action="#" class="form-validate is-alter">
+                                    <div class="form-validate is-alter">
                                         <div class="row g-gs">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-full-name">Building Name</label>
+                                                    <label class="form-label" for="txtxname">Building Name</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="fva-full-name" name="fva-full-name" required>
+                                                        <input type="text" class="form-control" id="txtname" name="txtname" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-topics">Type</label>
+                                                    <label class="form-label" for="txtbuildingtype">Type</label>
                                                     <div class="form-control-wrap ">
-                                                        <select class="form-control form-select" id="fva-topics" name="fva-topics" data-placeholder="Select a option" required>
+                                                        <select class="form-control form-select" id="txtbuildingtype" name="txtbuildingtype" data-placeholder="Select a option" runat="server" required>
                                                             <option label="empty" value=""></option>
-                                                            <option value="fva-gq">General Question</option>
-                                                            <option value="fva-tq">Tachnical Question</option>
-                                                            <option value="fva-ab">Account &amp; Billing</option>
+                                                            <option value="txtApartment">Apartment</option>
+                                                            <option value="txtHotel">Hotel</option>
+                                                            <option value="txtStorage">Storage &amp; Wharehouse</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-email">City</label>
+                                                    <label class="form-label" for="txtcity">City</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="email" class="form-control" id="fva-email" name="fva-email" required>
+                                                        <input type="text" class="form-control" id="txtcity" name="txtcity" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-subject">Address</label>
+                                                    <label class="form-label" for="txtaddress">Address</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="fva-subject" name="fva-subject" required>
+                                                        <input type="text" class="form-control" id="txtaddress" runat="server" name="txtaddress" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-subject">Total Units</label>
+                                                    <label class="form-label" for="txttotals">Total Units</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="fva-subjec" name="fva-subject" required>
+                                                        <input type="number" class="form-control" id="txttotals" name="txttotals" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-subject">Contractor</label>
+                                                    <label class="form-label" for="txtcontractor">Contractor</label>
                                                     <div class="form-control-wrap">
 
-                                                        <input type="text" class="form-control" id="fva-subje" name="fva-subject" required>
+                                                        <input type="text" class="form-control" id="txtcontractor" name="txtcontractor" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,22 +100,22 @@
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-message">Completion Year</label>
+                                                    <label class="form-label" for="txtdate">Completion Year</label>
                                                     <div class="form-control-wrap">
                                                         <div class="form-icon form-icon-left">
                                                             <em class="icon ni ni-calendar"></em>
                                                         </div>
-                                                        <input type="text" class="form-control date-picker" data-date-format="yyyy-mm-dd">
+                                                        <input type="text" id="txtdate" class="form-control date-picker" runat="server" data-date-format="yyyy-mm-dd" required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="fva-message">Picture</label>
+                                                    <label class="form-label" for="customFile">Picture</label>
                                                     <div class="custom-file">
-                                                        <input type="file" multiple class="custom-file-input" id="customFile">
-                                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        <asp:FileUpload CssClass="custom-file-input" ID="UploadImage" runat="server" />
+                                                        <label class="custom-file-label" for="UploadImage">Choose file</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,22 +124,19 @@
                                                     <label class="form-label">Ammenities</label>
                                                     <ul class="custom-control-group g-3 align-center">
                                                         <li>
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" name="fva-com" id="fva-com-email" required>
-                                                                <label class="custom-control-label" for="fva-com-email">Parking</label>
-                                                            </div>
+                                                            <asp:CheckBox ID="txtparking" Width="16px" runat="server" />
+                                                            <label for="txtparking">Parking</label>
+
                                                         </li>
                                                         <li>
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" name="fva-com" id="fva-com-sm" required>
-                                                                <label class="custom-control-label" for="fva-com-sms">Security</label>
-                                                            </div>
+                                                            <asp:CheckBox ID="txtsecurity" Width="16px" runat="server" />
+                                                            <label for="txtsecurity">Security</label>
+
                                                         </li>
                                                         <li>
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" name="fva-com" id="fva-com-sms" required>
-                                                                <label class="custom-control-label" for="fva-com-sms">Kid Friendly</label>
-                                                            </div>
+                                                            <asp:CheckBox ID="txtkid" Width="16px" runat="server" />
+                                                            <label for="txtkid">Kid Friendly</label>
+
                                                         </li>
 
                                                     </ul>
@@ -134,11 +144,12 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -11,6 +11,16 @@ namespace Nyumbani_Landlords
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LandLordInfo"] != null)
+            {
+
+                ClassLibrary_PropertyManager.Model.mLandLords landlord = new ClassLibrary_PropertyManager.Model.mLandLords();
+                landlord = (ClassLibrary_PropertyManager.Model.mLandLords)Session["LandLordInfo"];
+
+                spUserName.InnerHtml = landlord.LandLordName;
+                divUserName.InnerHtml = landlord.LandLordName;
+                spUserEmail.InnerHtml = landlord.LandLordEmail;
+            }
 
         }
     }
