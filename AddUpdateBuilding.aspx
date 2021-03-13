@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- content @s -->
-    <div class="nk-content ">
+    <div class="nk-content" style="padding-top:50px">
         <div class="container-fluid">
             <div class="nk-content-inner">
                 <div class="nk-content-body">
@@ -38,12 +38,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" >
                                 <div class="card-inner">
                                     <div class="form-validate is-alter">
                                         <div class="row g-gs">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="form-group" >
                                                     <label class="form-label" for="txtxname">Building Name</label>
                                                     <div class="form-control-wrap">
                                                         <input type="text" class="form-control" id="txtname" name="txtname" runat="server" required>
@@ -87,7 +87,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtcontractor">Contractor</label>
                                                     <div class="form-control-wrap">

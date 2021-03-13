@@ -21,3 +21,26 @@ StackTrace :   at System.Web.UI.WebControls.HyperLinkField.OnDataBindField(Objec
    at Nyumbani_Landlords.ViewBuildings.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\ViewBuildings.aspx.cs:line 34
 Date :12/3/2021 2:41:59 PM
 -----------------------------------------------------------------------------
+Message: A field or property with the name 'Edit' was not found on the selected data source.<br />
+StackTrace :   at System.Web.UI.WebControls.HyperLinkField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Nyumbani_Landlords.ViewBuildings.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\ViewBuildings.aspx.cs:line 34
+Date :13/3/2021 11:33:03 PM
+-----------------------------------------------------------------------------

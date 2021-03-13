@@ -65,62 +65,29 @@
                             <ul class="nk-menu">
 
                                 <!-- .nk-menu-item -->
-
-                                <!-- .nk-menu-item -->
-                                <li class="nk-menu-heading">
-                                    <h6 class="overline-title text-primary-alt">Tenants</h6>
-                                </li>
-                                <!-- .nk-menu-heading -->
-
-                                <!-- .nk-menu-item -->
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-users-fill"></em></span>
-                                        <span class="nk-menu-text">User Manage</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="html/user-list-default.html" class="nk-menu-link"><span class="nk-menu-text">User List - Default</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/user-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">User List - Regular</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/user-list-compact.html" class="nk-menu-link"><span class="nk-menu-text">User List - Compact</span></a>
-                                        </li>
-
-                                    </ul>
-                                    <!-- .nk-menu-sub -->
-                                </li>
-                                <!-- .nk-menu-item -->
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-cc-alt2-fill"></em></span>
-                                        <span class="nk-menu-text">Bills</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Order List - Default</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">Order List - Regular</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/orders-sales.html" class="nk-menu-link"><span class="nk-menu-text">Order List - Sales</span></a>
-                                        </li>
-                                    </ul>
-                                    <!-- .nk-menu-sub -->
-                                </li>
-                                <!-- .nk-menu-item -->
-
                                 <li class="nk-menu-heading">
                                     <h6 class="overline-title text-primary-alt">Property</h6>
                                 </li>
                                 <!-- .nk-menu-heading -->
+                                <!-- .nk-menu-item -->
+                                <li class="nk-menu-item has-sub">
+                                    <a href="Dashboard.aspx" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-dashboard-fill"></em></span>
+                                        <span class="nk-menu-text">Dashboard</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="Dashboard.aspx" class="nk-menu-link"><span class="nk-menu-text">OverView</span></a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-light-fill"></em></span>
-                                        <span class="nk-menu-text">Buildings</span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-building-fill"></em></span>
+                                        <span class="nk-menu-text">Building</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
@@ -136,55 +103,58 @@
                                 <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-files-fill"></em></span>
-                                        <span class="nk-menu-text">Houses</span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-home-fill"></em></span>
+                                        <span class="nk-menu-text">Unit</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/pages/errors/404-classic.html" target="_blank" class="nk-menu-link"><span class="nk-menu-text">404 Classic</span></a>
+                                            <a href="html/pages/errors/404-classic.html" target="_blank" class="nk-menu-link"><span class="nk-menu-text">Add Unit</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/pages/errors/504-classic.html" target="_blank" class="nk-menu-link"><span class="nk-menu-text">504 Classic</span></a>
+                                            <a href="html/pages/errors/504-classic.html" target="_blank" class="nk-menu-link"><span class="nk-menu-text">View Units</span></a>
                                         </li>
 
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
-                                <!-- .nk-menu-item -->
+
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-files-fill"></em></span>
-                                        <span class="nk-menu-text">Other Pages</span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-table-view-fill"></em></span>
+                                        <span class="nk-menu-text">Repairs</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/_blank.html" class="nk-menu-link"><span class="nk-menu-text">Blank / Startup</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/pages/faqs.html" class="nk-menu-link"><span class="nk-menu-text">Faqs / Help</span></a>
+                                            <a href="html/components/tables/table-basic.html" class="nk-menu-link"><span class="nk-menu-text">Basic Tables</span></a>
                                         </li>
 
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
+
+                                <!-- .nk-menu-item -->
                                 <!-- .nk-menu-item -->
                                 <li class="nk-menu-heading">
-                                    <h6 class="overline-title text-primary-alt">Reports</h6>
+                                    <h6 class="overline-title text-primary-alt">Users</h6>
                                 </li>
                                 <!-- .nk-menu-heading -->
+
+                                <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-layers-fill"></em></span>
-                                        <span class="nk-menu-text">Invoice</span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users-fill"></em></span>
+                                        <span class="nk-menu-text">User Manage</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/components/elements/alerts.html" class="nk-menu-link"><span class="nk-menu-text">Add Bills</span></a>
+                                            <a href="html/user-list-default.html" class="nk-menu-link"><span class="nk-menu-text">Add Tenant</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/components/elements/accordions.html" class="nk-menu-link"><span class="nk-menu-text">Prepare Invoice</span></a>
+                                            <a href="html/user-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">Add Employee</span></a>
                                         </li>
-
+                                        <li class="nk-menu-item">
+                                            <a href="html/user-list-compact.html" class="nk-menu-link"><span class="nk-menu-text">View Users</span></a>
+                                        </li>
 
                                     </ul>
                                     <!-- .nk-menu-sub -->
@@ -192,7 +162,43 @@
                                 <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-dot-box-fill"></em></span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-wallet-fill"></em></span>
+                                        <span class="nk-menu-text">Billing</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View User Bills</span></a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+                                <!-- .nk-menu-item -->
+                                <!-- .nk-menu-item -->
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-caution-fill"></em></span>
+                                        <span class="nk-menu-text">Complains</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View User Bills</span></a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+                                <!-- .nk-menu-item -->
+                                <!-- .nk-menu-item -->
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-calendar-fill"></em></span>
                                         <span class="nk-menu-text">Notices</span>
                                     </a>
                                     <ul class="nk-menu-sub">
@@ -210,27 +216,100 @@
                                     <!-- .nk-menu-sub -->
                                 </li>
                                 <!-- .nk-menu-item -->
+
+
+                                <!-- .nk-menu-item -->
+                                <li class="nk-menu-heading">
+                                    <h6 class="overline-title text-primary-alt">Tools</h6>
+                                </li>
+                                <!-- .nk-menu-heading -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-table-view-fill"></em></span>
-                                        <span class="nk-menu-text">Repairs</span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-printer-fill"></em></span>
+                                        <span class="nk-menu-text">Invoice</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/components/tables/table-basic.html" class="nk-menu-link"><span class="nk-menu-text">Basic Tables</span></a>
+                                            <a href="html/components/elements/alerts.html" class="nk-menu-link"><span class="nk-menu-text">Prepare Invoice</span></a>
                                         </li>
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/elements/accordions.html" class="nk-menu-link"><span class="nk-menu-text">View Invoices</span></a>
+                                        </li>
+
 
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
+                                <!-- .nk-menu-item -->
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-bell-fill"></em></span>
+                                        <span class="nk-menu-text">Announcments</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/misc/svg-icons.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">Add announcment</span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/misc/nioicon.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">View announcments</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+                                <!-- .nk-menu-item -->
 
                                 <!-- .nk-menu-item -->
-                                <li class="nk-menu-item">
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-scan-fill"></em></span>
+                                        <span class="nk-menu-text">QR Codes</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/misc/svg-icons.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">Generate Qr</span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/misc/nioicon.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">View QR</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+                                <!-- .nk-menu-item -->
+                                <!-- .nk-menu-item -->
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-pie-fill"></em></span>
+                                        <span class="nk-menu-text">Reports</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/misc/svg-icons.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">Add Notice</span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="html/components/misc/nioicon.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">View Notice</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+                                <!-- .nk-menu-item -->
+                                <%--        <li class="nk-menu-item">
                                     <a href="html/email-templates.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-tag-alt-fill"></em></span>
                                         <span class="nk-menu-text">Email Template</span>
                                     </a>
-                                </li>
+                                </li>--%>
                             </ul>
                             <!-- .nk-menu -->
                         </div>
@@ -437,8 +516,8 @@
 
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <!-- Bootstrap 4 -->
-  <%--  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
-       <!-- original  -->
+    <%--  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
+    <!-- original  -->
     <script src="./assets/js/bundle.js?ver=2.2.0"></script>
     <script src="./assets/js/scripts.js?ver=2.2.0"></script>
     <script src="./assets/js/charts/chart-ecommerce.js?ver=2.2.0"></script>
