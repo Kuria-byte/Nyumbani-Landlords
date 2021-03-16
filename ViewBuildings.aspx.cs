@@ -13,20 +13,22 @@ namespace Nyumbani_Landlords
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LandLordInfo"] == null)
+            {
+                Response.Redirect("login.aspx", false);
+                return;
+            }
 
 
             DataTable dtBuildings = new DataTable();
             try
             {
-                //if (Session["BusinessInfo"] != null)
-                //{
-                //clKMFoodOrderingSystem.Models.mBusinessUser businessUser = new clKMFoodOrderingSystem.Models.mBusinessUser();
-                //businessUser = (clKMFoodOrderingSystem.Models.mBusinessUser)Session["BusinessInfo"];
 
-                //int BusinessUserID = businessUser.BusinessUserID;
+                if (Session["LandLordInfo"] != null)
+                {
+                    int landlordId = Convert.ToInt32(Session["LandLordID"]);
 
-                dtBuildings = ClassLibrary_PropertyManager.Controller.cBuilding.GetBuildings();
+                    dtBuildings = ClassLibrary_PropertyManager.Controller.cBuilding.GetBuildingByLandLordID(landlordId);
 
 
                     {
@@ -36,7 +38,7 @@ namespace Nyumbani_Landlords
                         Session["dtBuildings"] = dtBuildings;
                     }
 
-                //}
+            }
             }
             catch (Exception ioExp)
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -14,11 +15,11 @@ namespace Nyumbani_Landlords
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //if (Session["BusinessInfo"] == null)
-            //{
-            //    Response.Redirect("login.aspx", false);
-            //    return;
-            //}
+            if (Session["LandLordInfo"] == null)
+            {
+                Response.Redirect("login.aspx", false);
+                return;
+            }
 
             if (!Page.IsPostBack)
             {
@@ -30,7 +31,7 @@ namespace Nyumbani_Landlords
                     if (Request.QueryString["id"] != null)
                     {
 
-                        //LoadDataOnUpdate();
+                        LoadDataOnUpdate();
                     }
 
                 }
@@ -84,12 +85,13 @@ namespace Nyumbani_Landlords
                     {
                         fileName = building.BuildingID.ToString() + "-" + building.BuildingName + "-" + UploadImage.FileName.Trim();
 
-                        if (File.Exists(Server.MapPath("~BuildingImages" + fileName)))
+                        if (File.Exists(Server.MapPath("/BuildingImages" + fileName)))
                         {
-                            File.Delete(Server.MapPath("~BuildingImages" + fileName));
+                            
+                            File.Delete(Server.MapPath("/BuildingImages" + fileName));
                             Console.WriteLine("File deleted.");
                         }
-                        UploadImage.SaveAs(Server.MapPath("~BuildingImages" + fileName));
+                        UploadImage.SaveAs(Server.MapPath("/BuildingImages" + fileName));
                         //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + fileName;
 
 
@@ -97,6 +99,8 @@ namespace Nyumbani_Landlords
                     }
 
                     building.BuildingImage  = fileName;
+
+                    //Session["dtBuildings"] = building;
 
 
                     if (btnSubmit.Text != "Update")
@@ -108,8 +112,8 @@ namespace Nyumbani_Landlords
                     else
                     {
                         building.BuildingID = Convert.ToInt32(Request.QueryString["id"]);
-                        //success = clKMFoodOrderingSystem.Controllers.cRestaurantMenu.UpdateMenu(menu);
-                        //divMsgSuccess.Visible = true;
+                        success = ClassLibrary_PropertyManager.Controller.cBuilding.UpdateBuildig(building);
+                        divMsgSuccess.Visible = true;
                     }
 
 
@@ -119,6 +123,7 @@ namespace Nyumbani_Landlords
                     txtaddress.Value = "";
                     txttotals.Value = "";
                     txtdate.Value = "";
+                    txtcontractor.Value = "";
                     txtparking.Checked = false;
                     txtsecurity.Checked = false;
                     txtkid.Checked = false;
@@ -143,5 +148,41 @@ namespace Nyumbani_Landlords
             }
 
         }
+
+        private void LoadDataOnUpdate()
+        {
+
+            string id = Request.QueryString["id"].Trim();
+
+            btnSubmit.Text = "Update";
+            DataTable dtRestaurant = (DataTable)Session["dtBuildings"];
+            foreach (DataRow dr in dtRestaurant.Rows)
+            {
+                if (dr["BuildingID"].ToString() == id)
+                {
+
+                
+                    txtname.Value = dr["BuildingName"].ToString();
+                    txtbuildingtype.Value = dr["BuildingType"].ToString();
+                   txtcity.Value  = dr["BuildingCity"].ToString();
+                    txtaddress.Value = dr["BuildingAddress"].ToString();
+                    txttotals.Value = dr["TotalUnits"].ToString();
+                    txtcontractor.Value = dr["Contractor"].ToString();
+                    txtdate.Value = dr["CompletionDate"].ToString();
+
+                    fileName = dr["BuildingImage"].ToString();
+
+                    //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + dr["MenuPicture"].ToString();
+                    //RequiredFieldValidator8.Enabled = false;
+
+                    txtparking.Checked = Convert.ToBoolean(dr["Parking"].ToString());
+                    txtsecurity.Checked = Convert.ToBoolean(dr["Security"].ToString());
+                    txtkid.Checked = Convert.ToBoolean(dr["KidFriendly"].ToString());
+                    break;
+                }
+            }
+
+        }
+
     }
 }
