@@ -108,10 +108,10 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/pages/errors/404-classic.html" target="_blank" class="nk-menu-link"><span class="nk-menu-text">Add Unit</span></a>
+                                            <a href="AddUpdateUnit.aspx"  class="nk-menu-link"><span class="nk-menu-text">Add Unit</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/pages/errors/504-classic.html" target="_blank" class="nk-menu-link"><span class="nk-menu-text">View Units</span></a>
+                                            <a href="ViewUnits.aspx" class="nk-menu-link"><span class="nk-menu-text">View Units</span></a>
                                         </li>
 
                                     </ul>

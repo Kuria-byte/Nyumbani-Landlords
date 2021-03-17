@@ -2404,6 +2404,7 @@
     <Content Include="Site.Master" />
     <Content Include="ViewBuildings.aspx" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="ViewUnits.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -2669,10 +2670,18 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ViewUnits.aspx.cs">
+      <DependentUpon>ViewUnits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewUnits.aspx.designer.cs">
+      <DependentUpon>ViewUnits.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="BuildingImages\" />
+    <Folder Include="UnitImages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

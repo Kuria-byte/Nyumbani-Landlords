@@ -75,7 +75,7 @@ namespace Nyumbani_Landlords
                 ddlBuildings.Enabled = false;
             }
 
-            //ddlBuildings.Items.Insert(0, new ListItem("--Select Building --", "0"));
+            ddlBuildings.Items.Insert(0, new ListItem("Select Building", "0"));
             dtBuilding = null;
 
         }
@@ -86,7 +86,8 @@ namespace Nyumbani_Landlords
             string id = Request.QueryString["id"].Trim();
 
             btnSubmit.Text = "Update";
-            DataTable dtUnit = (DataTable)Session["dtUnit"];
+            btnDelete.Visible = true;
+            DataTable dtUnit = (DataTable)Session["dtUnits"];
             foreach (DataRow dr in dtUnit.Rows)
             {
                 if (dr["UnitID"].ToString() == id)
@@ -96,16 +97,16 @@ namespace Nyumbani_Landlords
                     ddlUnitTypes.SelectedValue = dr["UnitType"].ToString();
                     txtPrice.Value = dr["UnitPrice"].ToString();
                     txtUnitNumber.Value = dr["UnitNumber"].ToString();
-                    txtFloorLevel.Value = dr["BuildingAddress"].ToString();
-                    txtUnitSize.Value = dr["UntSize"].ToString();
+                    txtFloorLevel.Value = dr["FloorLevel"].ToString();
+                    txtUnitSize.Value = dr["UnitSize"].ToString();
                     txtUnitAddress.Value = dr["UnitAddress"].ToString();
-                    txtCity.Value = dr["CompletionDate"].ToString();
+                    txtCity.Value = dr["UnitCity"].ToString();
                     txtDescription.Value = dr["Description"].ToString();
                     txtBedrooms.Value = dr["Bedrooms"].ToString();
                     txtBathrooms.Value = dr["Bathrooms"].ToString();
                     txtKitchen.Value = dr["Kitchen"].ToString();
 
-                    fileName = dr["UnitImages"].ToString();
+                    fileName = dr["UnitPictures"].ToString();
 
                     //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + dr["MenuPicture"].ToString();
                     //RequiredFieldValidator8.Enabled = false;
@@ -187,17 +188,24 @@ namespace Nyumbani_Landlords
                         divMsgSuccess.Visible = true;
                     }
 
-
-                    //txtbuildingtype.SelectedIndex = 0;
-                    //txtname.Value = "";
-                    //txtcity.Value = "";
-                    //txtaddress.Value = "";
-                    //txttotals.Value = "";
-                    //txtdate.Value = "";
-                    //txtcontractor.Value = "";
-                    //txtparking.Checked = false;
-                    //txtsecurity.Checked = false;
-                    //txtkid.Checked = false;
+                    ddlBuildings.SelectedIndex = 0;
+                    ddlUnitTypes.SelectedIndex = 0;
+                    txtPrice.Value = "";
+                    txtUnitNumber.Value = "";
+                    txtUnitAddress.Value = "";
+                    txtFloorLevel.Value = "";
+                    txtUnitSize.Value = "";
+                    txtCity.Value = "";
+                    txtDescription.Value = "";
+                    txtDescription.Value = "";
+                    txtBedrooms.Value = "";
+                    txtBathrooms.Value = "";
+                    txtKitchen.Value = "";
+                    txtGarage.Checked = false;
+                    txtFurnsihing.Checked = false;
+                    txtAvailable.Checked = false;
+                     
+            
 
                 }
 

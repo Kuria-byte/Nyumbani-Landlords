@@ -56,8 +56,8 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtbuildingtype">Unit Type</label>
                                                     <div class="form-control-wrap ">
-                                                        <asp:DropDownList ID="ddlUnitTypes" runat="server"  CssClass="form-control  form-select" Enabled="true">
-                                                            <asp:ListItem Value="">Please Select</asp:ListItem>
+                                                        <asp:DropDownList ID="ddlUnitTypes" runat="server"  CssClass="form-control  form-select" Enabled="true" >
+                                                           <asp:ListItem Value="0">Select Unit Type </asp:ListItem>
                                                             <asp:ListItem>Bungalow </asp:ListItem>
                                                             <asp:ListItem>Mansionette</asp:ListItem>
                                                              <asp:ListItem>Detatched</asp:ListItem>
@@ -75,7 +75,7 @@
                                                     <label class="form-label" for="txtPrice">Unit Price </label>
                                                     <div class="form-control-wrap">
 
-                                                        <input type="number" id="txtPrice" class="form-control form-control" runat="server" required>
+                                                        <input type="number" id="txtPrice" class="form-control form-control" runat="server" placeholder="Rental Price for Unit" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -84,7 +84,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtUnitNumber">Unit Number</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtUnitNumber" name="txtUnitNumber" runat="server" required>
+                                                        <input type="text" class="form-control" id="txtUnitNumber" name="txtUnitNumber" runat="server" placeholder="F29 -15 " required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -92,15 +92,15 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtFloorLevel">Floor Level</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txtFloorLevel" runat="server" name="txtaddress" required>
+                                                        <input type="number" class="form-control" id="txtFloorLevel" runat="server" name="txtaddress" placeholder="Unit Floor Level" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtUnitSize">Unit Size</label>
+                                                    <label class="form-label" for="txtUnitSize">Unit Area (ft)</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtUnitSize" name="txtUnitSize" runat="server" required>
+                                                        <input type="text" class="form-control" id="txtUnitSize" name="txtUnitSize" runat="server" placeholder="Unit area in feet" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -108,7 +108,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtUnitAddress">Address</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtUnitAddress" name="txtAddress" runat="server" required>
+                                                        <input type="text" class="form-control" id="txtUnitAddress" name="txtAddress" placeholder="Unit Address" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -119,7 +119,7 @@
                                                     <label class="form-label" for="txtCity">City </label>
                                                     <div class="form-control-wrap">
 
-                                                        <input type="text" id="txtCity" class="form-control" runat="server" required>
+                                                        <input type="text" id="txtCity" class="form-control" runat="server" placeholder="City" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -128,7 +128,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtDescription">Desctiption </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" id="txtDescription" class="form-control" runat="server" required>
+                                                        <input type="text" id="txtDescription" class="form-control" runat="server" placeholder="A short description about the unit" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,7 +137,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtBedrooms">Bedrooms </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txtBedrooms" name="txtBedrooms" runat="server" required>
+                                                        <input type="number" class="form-control" id="txtBedrooms" name="txtBedrooms" runat="server" placeholder="Number of bedrooms" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,7 +146,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtBathrooms">Bathrooms </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txtBathrooms" name="txtBathrooms" runat="server" required>
+                                                        <input type="number" class="form-control" id="txtBathrooms" name="txtBathrooms" runat="server"  placeholder="Number of bathrooms" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,7 +155,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtKitchen">Kitchen </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txtKitchen" name="txtKitchen" runat="server" required>
+                                                        <input type="number" class="form-control" id="txtKitchen" name="txtKitchen" runat="server" placeholder="Number of kitchens" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -198,6 +198,7 @@
                                                 <div class="form-group">
 
                                                     <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
+                                                       <asp:Button ID="btnDelete" runat="server" Text="Delete" Visible="false" class="btn btn-lg btn-danger" />
                                                 </div>
                                             </div>
                                         </div>
