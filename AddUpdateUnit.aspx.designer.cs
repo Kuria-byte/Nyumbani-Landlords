@@ -33,112 +33,112 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMsgError;
 
         /// <summary>
-        /// txtname control.
+        /// ddlBuildings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtname;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBuildings;
 
         /// <summary>
-        /// txtbuildingtype control.
+        /// ddlUnitTypes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect txtbuildingtype;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUnitTypes;
 
         /// <summary>
-        /// Text5 control.
+        /// txtPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Text5;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtPrice;
 
         /// <summary>
-        /// txtcity control.
+        /// txtUnitNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtcity;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUnitNumber;
 
         /// <summary>
-        /// txtaddress control.
+        /// txtFloorLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtaddress;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtFloorLevel;
 
         /// <summary>
-        /// txttotals control.
+        /// txtUnitSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txttotals;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUnitSize;
 
         /// <summary>
-        /// txtcontractor control.
+        /// txtUnitAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtcontractor;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUnitAddress;
 
         /// <summary>
-        /// txtdate control.
+        /// txtCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtdate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCity;
 
         /// <summary>
-        /// Text1 control.
+        /// txtDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDescription;
 
         /// <summary>
-        /// Number1 control.
+        /// txtBedrooms control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtBedrooms;
 
         /// <summary>
-        /// Number2 control.
+        /// txtBathrooms control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtBathrooms;
 
         /// <summary>
-        /// Number3 control.
+        /// txtKitchen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtKitchen;
 
         /// <summary>
         /// UploadImage control.
@@ -150,22 +150,31 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.WebControls.FileUpload UploadImage;
 
         /// <summary>
-        /// txtparking control.
+        /// txtGarage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox txtparking;
+        protected global::System.Web.UI.WebControls.CheckBox txtGarage;
 
         /// <summary>
-        /// txtsecurity control.
+        /// txtFurnsihing control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox txtsecurity;
+        protected global::System.Web.UI.WebControls.CheckBox txtFurnsihing;
+
+        /// <summary>
+        /// txtAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox txtAvailable;
 
         /// <summary>
         /// btnSubmit control.

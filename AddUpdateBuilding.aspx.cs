@@ -155,8 +155,8 @@ namespace Nyumbani_Landlords
             string id = Request.QueryString["id"].Trim();
 
             btnSubmit.Text = "Update";
-            DataTable dtRestaurant = (DataTable)Session["dtBuildings"];
-            foreach (DataRow dr in dtRestaurant.Rows)
+            DataTable dtBuilding = (DataTable)Session["dtBuildings"];
+            foreach (DataRow dr in dtBuilding.Rows)
             {
                 if (dr["BuildingID"].ToString() == id)
                 {

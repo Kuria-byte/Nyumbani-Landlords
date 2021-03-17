@@ -46,63 +46,69 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtxname">Building </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtname" name="txtname" runat="server" required>
+                                                        <asp:DropDownList ID="ddlBuildings" runat="server" CssClass="form-control  form-select" Enabled="true"></asp:DropDownList>
                                                     </div>
+
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtbuildingtype">Unit Type</label>
                                                     <div class="form-control-wrap ">
-                                                        <select class="form-control form-select" id="txtbuildingtype" name="txtbuildingtype" data-placeholder="Select a option" runat="server" required>
-                                                            <option label="empty" value=""></option>
-                                                            <option value="txtApartment">Bungalow</option>
-                                                            <option value="txtHotel">Mansionette</option>
-                                                            <option value="txtStorage">Hotel Unit</option>
-                                                        </select>
+                                                        <asp:DropDownList ID="ddlUnitTypes" runat="server"  CssClass="form-control  form-select" Enabled="true">
+                                                            <asp:ListItem Value="">Please Select</asp:ListItem>
+                                                            <asp:ListItem>Bungalow </asp:ListItem>
+                                                            <asp:ListItem>Mansionette</asp:ListItem>
+                                                             <asp:ListItem>Detatched</asp:ListItem>
+                                                            <asp:ListItem>Studio</asp:ListItem>
+                                                            <asp:ListItem>Apartment Unit</asp:ListItem>
+                                                            <asp:ListItem>Hotel Unit</asp:ListItem>
+                                                            <asp:ListItem>Storage Unit</asp:ListItem>
+                                                        </asp:DropDownList>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtdate">Unit Price </label>
+                                                    <label class="form-label" for="txtPrice">Unit Price </label>
                                                     <div class="form-control-wrap">
 
-                                                        <input type="number" id="Text5" class="form-control form-control" runat="server" required>
+                                                        <input type="number" id="txtPrice" class="form-control form-control" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtcity">Unit Number</label>
+                                                    <label class="form-label" for="txtUnitNumber">Unit Number</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtcity" name="txtcity" runat="server" required>
+                                                        <input type="text" class="form-control" id="txtUnitNumber" name="txtUnitNumber" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtaddress">Floor Level</label>
+                                                    <label class="form-label" for="txtFloorLevel">Floor Level</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txtaddress" runat="server" name="txtaddress" required>
+                                                        <input type="number" class="form-control" id="txtFloorLevel" runat="server" name="txtaddress" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txttotals">Unit Size</label>
+                                                    <label class="form-label" for="txtUnitSize">Unit Size</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txttotals" name="txttotals" runat="server" required>
+                                                        <input type="text" class="form-control" id="txtUnitSize" name="txtUnitSize" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtcontractor">Address</label>
+                                                    <label class="form-label" for="txtUnitAddress">Address</label>
                                                     <div class="form-control-wrap">
-
-                                                        <input type="text" class="form-control" id="txtcontractor" name="txtcontractor" runat="server" required>
+                                                        <input type="text" class="form-control" id="txtUnitAddress" name="txtAddress" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -110,47 +116,46 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtdate">City </label>
+                                                    <label class="form-label" for="txtCity">City </label>
                                                     <div class="form-control-wrap">
 
-                                                        <input type="text" id="txtdate" class="form-control date-picker" runat="server" required>
+                                                        <input type="text" id="txtCity" class="form-control" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtdate">Desctiption </label>
+                                                    <label class="form-label" for="txtDescription">Desctiption </label>
                                                     <div class="form-control-wrap">
-
-                                                        <input type="text" id="Text1" class="form-control" runat="server" required>
+                                                        <input type="text" id="txtDescription" class="form-control" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtdate">Bedrooms </label>
+                                                    <label class="form-label" for="txtBedrooms">Bedrooms </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="Number1" name="txttotals" runat="server" required>
+                                                        <input type="number" class="form-control" id="txtBedrooms" name="txtBedrooms" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtdate">Bathrooms </label>
+                                                    <label class="form-label" for="txtBathrooms">Bathrooms </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="Number2" name="txttotals" runat="server" required>
+                                                        <input type="number" class="form-control" id="txtBathrooms" name="txtBathrooms" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtdate">Kitchen </label>
+                                                    <label class="form-label" for="txtKitchen">Kitchen </label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="Number3" name="txttotals" runat="server" required>
+                                                        <input type="number" class="form-control" id="txtKitchen" name="txtKitchen" runat="server" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -170,13 +175,18 @@
                                                     <label class="form-label">Ammenities</label>
                                                     <ul class="custom-control-group g-3 align-center">
                                                         <li>
-                                                            <asp:CheckBox ID="txtparking" Width="16px" runat="server" />
+                                                            <asp:CheckBox ID="txtGarage" Width="16px" runat="server" />
                                                             <label for="txtparking">Garage</label>
 
                                                         </li>
                                                         <li>
-                                                            <asp:CheckBox ID="txtsecurity" Width="16px" runat="server" />
+                                                            <asp:CheckBox ID="txtFurnsihing" Width="16px" runat="server" />
                                                             <label for="txtsecurity">Furnsihing</label>
+
+                                                        </li>
+                                                           <li>
+                                                            <asp:CheckBox ID="txtAvailable" Width="16px" runat="server" />
+                                                            <label for="txtAvailable">Available</label>
 
                                                         </li>
 
@@ -187,7 +197,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" />
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
                                                 </div>
                                             </div>
                                         </div>
