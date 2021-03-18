@@ -76,8 +76,7 @@
 
                                     <asp:TemplateField HeaderText="Unit Info">
                                         <ItemTemplate>
-                                            <strong>Number :</strong> <%# Eval("UnitSize")%>
-                                            <br />
+                                        
                                             <strong>Floor : </strong><%# Eval("FloorLevel")%>
                                             <br />
                                             <strong>Size : </strong><%# Eval("UnitSize")%>
@@ -85,11 +84,11 @@
 
                                     </asp:TemplateField>
                                    
-                                    <%-- <asp:BoundField HeaderText="Restaurant" DataField="RestaurantName" />--%>
+                          
                               
                                      <asp:TemplateField HeaderText="Unit Address">
                                         <ItemTemplate>
-                                            <strong>Address :</strong> <%# Eval("UnitSize")%>
+                                            <strong>Address :</strong> <%# Eval("UnitAddress")%>
                                             <br />
                                             <strong>City: </strong><%# Eval("UnitCity")%>
                                            
@@ -97,22 +96,32 @@
 
                                     </asp:TemplateField>
 
-                                       <asp:BoundField HeaderText="Description" DataField="Description" />
+                                       <%--<asp:BoundField HeaderText="Description" DataField="Description" />--%>
 
                                        <asp:TemplateField HeaderText="Unit Metrics">
                                         <ItemTemplate>
-                                            <strong>Number :</strong> <%# Eval("Bathrooms")%>
+                                            <strong>Bathroom :</strong> <%# Eval("Bathrooms")%>
                                             <br />
-                                            <strong>Floor : </strong><%# Eval("Kitchen")%>
+                                            <strong>Kitchen : </strong><%# Eval("Kitchen")%>
                                             <br />
-                                            <strong>Size : </strong><%# Eval("Bedrooms")%>
+                                            <strong>Bedroom : </strong><%# Eval("Bedrooms")%>
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
                                                                 
-                                    <asp:BoundField HeaderText="Added on" DataField="UnitAddedOn" />                                                          
-                                    <asp:BoundField HeaderText="Garage" DataField="Garage" />
-                                    <asp:BoundField HeaderText="Furnishing" DataField="Furnishing" />
+                                    <asp:BoundField HeaderText="Added on" DataField="UnitAddedOn" />  
+                                    
+                                    
+                                       <asp:TemplateField HeaderText="Ammenities">
+                                        <ItemTemplate>
+                                            <strong>Garage :</strong> <%# Eval("Garage")%>
+                                            <br />
+                                            <strong>Furnishing : </strong><%# Eval("Furnishing")%>
+                                        
+                                        </ItemTemplate>
+
+                                    </asp:TemplateField>
+                                   
                                     <asp:BoundField HeaderText="Available" DataField="Available" />
 
 

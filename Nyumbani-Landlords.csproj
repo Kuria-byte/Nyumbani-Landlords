@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddUpdateBuilding.aspx" />
+    <Content Include="AddUpdateTenant.aspx" />
     <Content Include="AddUpdateUnit.aspx" />
     <Content Include="assets\css\dashlite.css" />
     <Content Include="assets\css\dashlite.min.css" />
@@ -2599,6 +2600,13 @@
     </Compile>
     <Compile Include="AddUpdateBuilding.aspx.designer.cs">
       <DependentUpon>AddUpdateBuilding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUpdateTenant.aspx.cs">
+      <DependentUpon>AddUpdateTenant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUpdateTenant.aspx.designer.cs">
+      <DependentUpon>AddUpdateTenant.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddUpdateUnit.aspx.cs">
       <DependentUpon>AddUpdateUnit.aspx</DependentUpon>
