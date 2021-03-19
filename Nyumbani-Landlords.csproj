@@ -2689,6 +2689,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="BuildingImages\" />
+    <Folder Include="TenantImages\" />
     <Folder Include="UnitImages\" />
   </ItemGroup>
   <ItemGroup>

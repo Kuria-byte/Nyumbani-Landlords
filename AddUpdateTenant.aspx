@@ -57,7 +57,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtbuildingtype">Occupation</label>
                                                     <div class="form-control-wrap ">
-                                                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control  form-select" Enabled="true">
+                                                        <asp:DropDownList ID="ddlOccupation" runat="server" CssClass="form-control  form-select" Enabled="true">
                                                             <asp:ListItem Value="0">Select occupation </asp:ListItem>
                                                             <asp:ListItem>Student </asp:ListItem>
                                                             <asp:ListItem>Employed</asp:ListItem>
@@ -147,7 +147,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" />
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
                                                     <asp:Button ID="btnDelete" runat="server" Text="Delete" Visible="false" class="btn btn-lg btn-danger" />
                                                 </div>
                                             </div>
