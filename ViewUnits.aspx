@@ -67,6 +67,11 @@
                                     <asp:HyperLinkField DataNavigateUrlFields="UnitID" HeaderText="Update"
                                         DataNavigateUrlFormatString="AddUpdateUnit.aspx?id={0}"
                                         Text="Edit" NavigateUrl="AddUpdateUnit.aspx" />
+                                           <asp:TemplateField HeaderText="Picture ">
+                                        <ItemTemplate>
+                                            <img src='<%# "UnitImages" + "\\" + Eval("UnitPictures") %>' width="100" height="100" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
 
                                     <asp:BoundField HeaderText="Type" DataField="UnitType" />
 

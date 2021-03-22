@@ -202,3 +202,87 @@ StackTrace :   at System.Data.SqlClient.SqlConnection.OnError(SqlException excep
    at Nyumbani_Landlords.AddUpdateTenant.btnSubmit_Click(Object sender, EventArgs e)
 Date :19/3/2021 1:20:18 PM
 -----------------------------------------------------------------------------
+Message: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'TenanatOccupation'.<br />
+StackTrace :   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.viewtenants_aspx.__DataBind__control22(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\ViewTenants.aspx:line 90
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Nyumbani_Landlords.ViewTenants.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\ViewTenants.aspx.cs:line 36
+Date :22/3/2021 1:39:07 PM
+-----------------------------------------------------------------------------
+Message: Column 'TenantNationslID' does not belong to table .<br />
+StackTrace :   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Nyumbani_Landlords.AddUpdateTenant.LoadDataOnUpdate()
+   at Nyumbani_Landlords.AddUpdateTenant.Page_Load(Object sender, EventArgs e)
+Date :22/3/2021 2:04:27 PM
+-----------------------------------------------------------------------------
+Message: Column 'TenantNationslID' does not belong to table .<br />
+StackTrace :   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Nyumbani_Landlords.AddUpdateTenant.LoadDataOnUpdate()
+   at Nyumbani_Landlords.AddUpdateTenant.Page_Load(Object sender, EventArgs e)
+Date :22/3/2021 2:05:46 PM
+-----------------------------------------------------------------------------
+Message: Incorrect syntax near ']'.<br />
+StackTrace :   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ClassLibrary_PropertyManager.Controller.cTenant.UpdateTenant(mTenant pTenant) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cTenant.cs:line 104
+   at Nyumbani_Landlords.AddUpdateTenant.btnSubmit_Click(Object sender, EventArgs e)
+Date :22/3/2021 2:07:17 PM
+-----------------------------------------------------------------------------
+Message: Incorrect syntax near ']'.<br />
+StackTrace :   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ClassLibrary_PropertyManager.Controller.cTenant.UpdateTenant(mTenant pTenant) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cTenant.cs:line 104
+   at Nyumbani_Landlords.AddUpdateTenant.btnSubmit_Click(Object sender, EventArgs e)
+Date :22/3/2021 2:08:18 PM
+-----------------------------------------------------------------------------
+Message: Cannot use a leading .. to exit above the top directory.<br />
+StackTrace :   at System.Web.Util.UrlPath.ReduceVirtualPath(String path)
+   at System.Web.Util.UrlPath.Reduce(String path)
+   at System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   at System.Web.VirtualPath.Combine(VirtualPath relativePath)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at Nyumbani_Landlords.AddUpdateTenant.btnSubmit_Click(Object sender, EventArgs e)
+Date :22/3/2021 2:40:06 PM
+-----------------------------------------------------------------------------
+Message: Unable to cast object of type 'ClassLibrary_PropertyManager.Model.mUnit' to type 'System.Data.DataTable'.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateUnit.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateUnit.aspx.cs:line 92
+   at Nyumbani_Landlords.AddUpdateUnit.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateUnit.aspx.cs:line 36
+Date :22/3/2021 6:57:10 PM
+-----------------------------------------------------------------------------

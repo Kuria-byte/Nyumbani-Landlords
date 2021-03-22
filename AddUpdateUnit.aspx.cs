@@ -87,6 +87,8 @@ namespace Nyumbani_Landlords
 
             btnSubmit.Text = "Update";
             btnDelete.Visible = true;
+            imgDisplayPicture.Visible = true;
+
             DataTable dtUnit = (DataTable)Session["dtUnits"];
             foreach (DataRow dr in dtUnit.Rows)
             {
@@ -108,8 +110,7 @@ namespace Nyumbani_Landlords
 
                     fileName = dr["UnitPictures"].ToString();
 
-                    //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + dr["MenuPicture"].ToString();
-                    //RequiredFieldValidator8.Enabled = false;
+                    imgDisplayPicture.ImageUrl = "/UnitImages/" + dr["UnitPictures"].ToString();
 
                     txtGarage.Checked = Convert.ToBoolean(dr["Garage"].ToString());
                     txtFurnsihing.Checked = Convert.ToBoolean(dr["Furnishing"].ToString());
@@ -127,7 +128,7 @@ namespace Nyumbani_Landlords
             {
                 ClassLibrary_PropertyManager.Model.mUnit unit = new ClassLibrary_PropertyManager.Model.mUnit();
                 int landlordId = Convert.ToInt32(Session["LandLordID"]);
-
+              
                 try
                 {
 
@@ -155,16 +156,16 @@ namespace Nyumbani_Landlords
 
                     if (UploadImage.HasFile)
                     {
-                        fileName = unit.UnitID.ToString() + "-" + unit.UnitType + "-" + UploadImage.FileName.Trim();
+                        fileName = unit.UnitNumber.ToString() + "-" + unit.UnitType + "-" + UploadImage.FileName.Trim();
 
-                        if (File.Exists(Server.MapPath("/UnitImages" + fileName)))
+                        if (File.Exists(Server.MapPath("/UnitImages/" + fileName)))
                         {
 
-                            File.Delete(Server.MapPath("/UnitImages" + fileName));
+                            File.Delete(Server.MapPath("/UnitImages/" + fileName));
                             Console.WriteLine("File deleted.");
                         }
-                        UploadImage.SaveAs(Server.MapPath("/UnitImages" + fileName));
-                        //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + fileName;
+                        UploadImage.SaveAs(Server.MapPath("/UnitImages/" + fileName));
+            
 
 
 

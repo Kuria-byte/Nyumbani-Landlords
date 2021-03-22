@@ -11,7 +11,7 @@ namespace Nyumbani_Landlords
 {
 
 
-    public partial class AddUpdateTenant
+    public partial class AddTenantContract
     {
 
         /// <summary>
@@ -33,67 +33,58 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMsgError;
 
         /// <summary>
-        /// txtTenantName control.
+        /// ddlTenant control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTenantName;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTenant;
 
         /// <summary>
-        /// ddlOccupation control.
+        /// ddlUnit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOccupation;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUnit;
 
         /// <summary>
-        /// txtNationalID control.
+        /// txtDeposit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNationalID;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtDeposit;
 
         /// <summary>
-        /// txtTenantEmail control.
+        /// txtRent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTenantEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtRent;
 
         /// <summary>
-        /// txtPhone control.
+        /// txtStart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtPhone;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtStart;
 
         /// <summary>
-        /// txtAddress control.
+        /// txtEnd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
-
-        /// <summary>
-        /// txtCompany control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCompany;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtEnd;
 
         /// <summary>
         /// UploadImage control.

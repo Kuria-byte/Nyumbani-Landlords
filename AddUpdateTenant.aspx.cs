@@ -58,6 +58,7 @@ namespace Nyumbani_Landlords
 
             btnSubmit.Text = "Update";
             btnDelete.Visible = true;
+            imgDisplayPicture.Visible = true;
             DataTable dtUnit = (DataTable)Session["dtTenants"];
             foreach (DataRow dr in dtUnit.Rows)
             {
@@ -66,7 +67,7 @@ namespace Nyumbani_Landlords
 
                     txtTenantName.Value = dr["TenantName"].ToString();
                     ddlOccupation.SelectedValue = dr["TenantOccupation"].ToString();
-                    txtNationalID.Value = dr["TenantNationslID"].ToString();
+                    txtNationalID.Value = dr["TenantNationalID"].ToString();
                     txtTenantEmail.Value = dr["TenantEmail"].ToString();
                     txtPhone.Value = dr["TenantPhone"].ToString();
                     txtAddress.Value = dr["TenantHomeAddress"].ToString();
@@ -75,6 +76,8 @@ namespace Nyumbani_Landlords
                     fileName = dr["TenantPicture"].ToString();
 
                     //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + dr["MenuPicture"].ToString();
+                    imgDisplayPicture.ImageUrl = "/TenantImages/" + dr["TenantPicture"].ToString();
+
                     //RequiredFieldValidator8.Enabled = false;
 
                     txtStatus.Checked = Convert.ToBoolean(dr["Status"].ToString());
@@ -114,14 +117,16 @@ namespace Nyumbani_Landlords
                     {
                         fileName = tenant.TenantName.ToString() + "-" + tenant.TenantNationalID + "-" + UploadImage.FileName.Trim();
 
-                        if (File.Exists(Server.MapPath("/TenantImages" + fileName)))
+
+                        if (File.Exists(Server.MapPath("/TenantImages/") + fileName)) 
                         {
 
-                            File.Delete(Server.MapPath("/TenantImages" + fileName));
+                            File.Delete(Server.MapPath("/TenantImages/") + fileName);
                             Console.WriteLine("File deleted.");
                         }
-                        UploadImage.SaveAs(Server.MapPath("/TenantImages" + fileName));
-                        //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + fileName;
+                        UploadImage.SaveAs(Server.MapPath("/TenantImages/") + fileName);
+
+                        imgDisplayPicture.ImageUrl = "/TenantImages/" + fileName;
 
 
 
@@ -129,7 +134,6 @@ namespace Nyumbani_Landlords
 
                     tenant.TenantPicture = fileName;
 
-                    //Session["dtunits"] = unit;
 
 
                     if (btnSubmit.Text != "Update")

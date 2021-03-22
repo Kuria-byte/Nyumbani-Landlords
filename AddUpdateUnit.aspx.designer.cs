@@ -150,6 +150,15 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.WebControls.FileUpload UploadImage;
 
         /// <summary>
+        /// imgDisplayPicture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgDisplayPicture;
+
+        /// <summary>
         /// txtGarage control.
         /// </summary>
         /// <remarks>

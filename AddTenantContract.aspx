@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nyumbani.Master" AutoEventWireup="true" CodeBehind="AddUpdateTenant.aspx.cs" Inherits="Nyumbani_Landlords.AddUpdateTenant" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nyumbani.Master" AutoEventWireup="true" CodeBehind="AddTenantContract.aspx.cs" Inherits="Nyumbani_Landlords.AddTenantContract" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <!-- content @s -->
     <div class="nk-content" style="padding-top: 50px">
         <div class="container-fluid">
@@ -21,7 +20,7 @@
                                 <div class="nk-block-head-sub"><a class="back-to" href="/"><em class="icon ni ni-arrow-left"></em><span>Home</span></a></div>
 
                                 <div class="nk-block-head-content">
-                                    <h4 class="title nk-block-title">Manage Tenant</h4>
+                                    <h4 class="title nk-block-title">Manage Contract</h4>
                                     <div class="nk-block-des">
                                     </div>
                                 </div>
@@ -29,12 +28,12 @@
                                 <%--  Alerts--%>
                                 <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
                                     <div class="alert alert-fill alert-success alert-icon">
-                                        <em class="icon ni ni-check-circle"></em><strong>Tenant information saved</strong> successfully
+                                        <em class="icon ni ni-check-circle"></em><strong>Tenant contract information saved</strong> successfully
                                     </div>
                                 </div>
                                 <div class="example-alert" id="divMsgError" visible="false" runat="server">
                                     <div class="alert alert-fill alert-warning alert-icon">
-                                        <em class="icon ni ni-alert-circle"></em><strong>Oops!</strong> error occured while adding tenant information.
+                                        <em class="icon ni ni-alert-circle"></em><strong>Oops!</strong> error occured while adding tenant contract information.
                      
                                     </div>
                                 </div>
@@ -43,27 +42,21 @@
                                 <div class="card-inner">
                                     <div class="form-validate is-alter">
                                         <div class="row g-gs">
-                                        
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="txtTenantName">Full Names </label>
-                                                    <div class="form-control-wrap">
 
-                                                        <input type="text" id="txtTenantName" class="form-control form-control" runat="server" placeholder="Tenant's Name" required>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="txtTenantName">Tenant </label>
+                                                    <div class="form-control-wrap">
+                                                        <asp:DropDownList ID="ddlTenant" runat="server" CssClass="form-control  form-select" Enabled="true">
+                                                        </asp:DropDownList>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtbuildingtype">Occupation</label>
+                                                    <label class="form-label" for="txtbuildingtype">Unit</label>
                                                     <div class="form-control-wrap ">
-                                                        <asp:DropDownList ID="ddlOccupation" runat="server" CssClass="form-control  form-select" Enabled="true">
-                                                            <asp:ListItem Value="0">Select occupation </asp:ListItem>
-                                                            <asp:ListItem>Student </asp:ListItem>
-                                                            <asp:ListItem>Employed</asp:ListItem>
-                                                            <asp:ListItem>Employee</asp:ListItem>
-                                                            <asp:ListItem>Retired</asp:ListItem>
-
+                                                        <asp:DropDownList ID="ddlUnit" runat="server" CssClass="form-control  form-select" Enabled="true">
                                                         </asp:DropDownList>
 
                                                     </div>
@@ -73,9 +66,9 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtNationalID">National ID</label>
+                                                    <label class="form-label" for="txtDeposit">Deposit</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtNationalID" name="txtUnitSize" runat="server" placeholder="34201440" required>
+                                                        <input type="Number" class="form-control" id="txtDeposit" name="txtDeposit" runat="server" placeholder="e.g Kes 30,000" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,66 +76,58 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtTenantEmail"> Email</label>
+                                                    <label class="form-label" for="txtRent">Rent</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtTenantEmail" name="txtUnitNumber" runat="server" placeholder="example@gmail.com" required>
+                                                        <input type="Number" class="form-control" id="txtRent" name="txtRent" runat="server" placeholder="e.g Kes 15,000" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtPhone"> Phone</label>
+                                                    <label class="form-label" for="txtStart">Start Date</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="number" class="form-control" id="txtPhone" runat="server" name="txtaddress" placeholder="0722-123-456" required>
+                                                        <div class="form-icon form-icon-left">
+                                                            <em class="icon ni ni-calendar"></em>
+                                                        </div>
+                                                        <input type="text" id="txtStart" class="form-control date-picker" runat="server" data-date-format="yyyy-mm-dd" required>
                                                     </div>
                                                 </div>
                                             </div>
-                                             <div class="col-md-6">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtAddress">Current Address</label>
+                                                    <label class="form-label" for="txtEnd">End Date</label>
                                                     <div class="form-control-wrap">
-
-                                                        <input type="text" id="txtAddress" class="form-control" runat="server" placeholder="Nairobi" required>
+                                                        <div class="form-icon form-icon-left">
+                                                            <em class="icon ni ni-calendar"></em>
+                                                        </div>
+                                                        <input type="text" id="txtEnd" class="form-control date-picker" runat="server" data-date-format="yyyy-mm-dd" required>
                                                     </div>
                                                 </div>
                                             </div>
+
 
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtCompany">Organisation</label>
-                                                    <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" id="txtCompany" name="txtCompany" placeholder="Safaricom" runat="server" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                           
-                       
-
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="customFile">Pictures</label>
+                                                    <label class="form-label" for="customFile">Agreement Document</label>
                                                     <div class="custom-file">
                                                         <asp:FileUpload CssClass="custom-file-input" ID="UploadImage" runat="server" />
                                                         <label class="custom-file-label" for="UploadImage">Choose file</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                             <asp:Image ID="imgDisplayPicture" Visible="false" runat="server" style="padding-left: 15px" Height="100px" Width="120px" />
+                                            <asp:Image ID="imgDisplayPicture" Visible="false" runat="server" Style="padding-left: 15px" Height="100px" Width="120px" />
 
-                                                  <div class="col-md-12">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label">Status</label>
                                                     <ul class="custom-control-group g-3 align-center">
                                                         <li>
                                                             <asp:CheckBox ID="txtStatus" Width="16px" runat="server" />
-                                                            <label for="txtStatus">Available</label>
+                                                            <label for="txtStatus">Valid</label>
 
                                                         </li>
-                                                       
+
                                                     </ul>
                                                 </div>
                                             </div>

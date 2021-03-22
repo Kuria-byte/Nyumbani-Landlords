@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddTenantContract.aspx" />
     <Content Include="AddUpdateBuilding.aspx" />
     <Content Include="AddUpdateTenant.aspx" />
     <Content Include="AddUpdateUnit.aspx" />
@@ -2405,6 +2406,7 @@
     <Content Include="Site.Master" />
     <Content Include="ViewBuildings.aspx" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="ViewTenants.aspx" />
     <Content Include="ViewUnits.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -2594,6 +2596,13 @@
     <Content Include="scss\_dashlite_variables.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTenantContract.aspx.cs">
+      <DependentUpon>AddTenantContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTenantContract.aspx.designer.cs">
+      <DependentUpon>AddTenantContract.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddUpdateBuilding.aspx.cs">
       <DependentUpon>AddUpdateBuilding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2677,6 +2686,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTenants.aspx.cs">
+      <DependentUpon>ViewTenants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTenants.aspx.designer.cs">
+      <DependentUpon>ViewTenants.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewUnits.aspx.cs">
       <DependentUpon>ViewUnits.aspx</DependentUpon>

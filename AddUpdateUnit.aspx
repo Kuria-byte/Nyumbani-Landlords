@@ -170,6 +170,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                              <asp:Image ID="imgDisplayPicture" Visible="false" runat="server" style="padding-left: 15px" Height="100px" Width="120px" />
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label">Ammenities</label>
