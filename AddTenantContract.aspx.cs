@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace Nyumbani_Landlords
 {
     public partial class AddTenantContract : System.Web.UI.Page
     {
-
+        private CultureInfo infoCurr;
+   
         private static string fileName = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +25,9 @@ namespace Nyumbani_Landlords
 
             if (!Page.IsPostBack)
             {
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("guz-KE");
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("guz-KE");
+
                 int landlordId = Convert.ToInt32(Session["LandLordID"]);
 
                 try
@@ -33,7 +38,7 @@ namespace Nyumbani_Landlords
                     if (Request.QueryString["id"] != null)
                     {
 
-                        //LoadDataOnUpdate();
+                        LoadDataOnUpdate();
                     }
 
                 }
@@ -105,38 +110,23 @@ namespace Nyumbani_Landlords
 
         private void LoadDataOnUpdate()
         {
-
+            infoCurr = new CultureInfo("guz-KE");
             string id = Request.QueryString["id"].Trim();
 
             btnSubmit.Text = "Update";
             btnDelete.Visible = true;
-            DataTable dtUnit = (DataTable)Session["dtUnits"];
+            DataTable dtUnit = (DataTable)Session["dtTenantContracts"];
             foreach (DataRow dr in dtUnit.Rows)
             {
-                if (dr["UnitID"].ToString() == id)
+                if (dr["TenantContractID"].ToString() == id)
                 {
-
-                    //ddlBuildings.SelectedValue = dr["BuildingID"].ToString();
-                    //ddlUnitTypes.SelectedValue = dr["UnitType"].ToString();
-                    //txtPrice.Value = dr["UnitPrice"].ToString();
-                    //txtUnitNumber.Value = dr["UnitNumber"].ToString();
-                    //txtFloorLevel.Value = dr["FloorLevel"].ToString();
-                    //txtUnitSize.Value = dr["UnitSize"].ToString();
-                    //txtUnitAddress.Value = dr["UnitAddress"].ToString();
-                    //txtCity.Value = dr["UnitCity"].ToString();
-                    //txtDescription.Value = dr["Description"].ToString();
-                    //txtBedrooms.Value = dr["Bedrooms"].ToString();
-                    //txtBathrooms.Value = dr["Bathrooms"].ToString();
-                    //txtKitchen.Value = dr["Kitchen"].ToString();
-
-                    //fileName = dr["UnitPictures"].ToString();
-
-                    ////DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + dr["MenuPicture"].ToString();
-                    ////RequiredFieldValidator8.Enabled = false;
-
-                    //txtGarage.Checked = Convert.ToBoolean(dr["Garage"].ToString());
-                    //txtFurnsihing.Checked = Convert.ToBoolean(dr["Furnishing"].ToString());
-                    //txtAvailable.Checked = Convert.ToBoolean(dr["Available"].ToString());
+                    ddlTenant.SelectedValue = dr["TenantID"].ToString();
+                    ddlUnit.SelectedValue = dr["UnitID"].ToString();
+                    txtDeposit.Value = Convert.ToDecimal(dr["TenantDeposit"]).ToString();
+                    txtRent.Value = Convert.ToDecimal(dr["TenantMonthlyRent"]).ToString();
+                    txtStart.Value = Convert.ToDateTime(dr["ContractStartDate"]).ToString("dd-MM-yyyy");
+                    txtEnd.Value = Convert.ToDateTime(dr["ContractEndDate"]).ToString("dd-MM-yyyy");
+                    txtStatus.Checked = Convert.ToBoolean(dr["ContractStatusID"].ToString());
 
                     break;
                 }

@@ -2406,6 +2406,7 @@
     <Content Include="Site.Master" />
     <Content Include="ViewBuildings.aspx" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="ViewTenantContracts.aspx" />
     <Content Include="ViewTenants.aspx" />
     <Content Include="ViewUnits.aspx" />
     <Content Include="Web.config" />
@@ -2686,6 +2687,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTenantContracts.aspx.cs">
+      <DependentUpon>ViewTenantContracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTenantContracts.aspx.designer.cs">
+      <DependentUpon>ViewTenantContracts.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewTenants.aspx.cs">
       <DependentUpon>ViewTenants.aspx</DependentUpon>

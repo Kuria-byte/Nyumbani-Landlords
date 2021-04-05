@@ -135,7 +135,7 @@
                                                 <div class="form-group">
 
                                                     <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
-                                                    <asp:Button ID="btnDelete" runat="server" Text="Delete" Visible="false" class="btn btn-lg btn-danger" />
+                                                    <asp:Button ID="btnDelete" runat="server" Text="Terminate " Visible="false" class="btn btn-lg btn-danger" />
                                                 </div>
                                             </div>
                                         </div>
