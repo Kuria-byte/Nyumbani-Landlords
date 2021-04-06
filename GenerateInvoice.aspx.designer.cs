@@ -42,13 +42,13 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.WebControls.DropDownList ddlTenant;
 
         /// <summary>
-        /// ddlUnit control.
+        /// ddlBillType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUnit;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBillType;
 
         /// <summary>
         /// txtAmount control.

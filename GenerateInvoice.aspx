@@ -48,18 +48,28 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtTenantName">Tenant </label>
                                                     <div class="form-control-wrap">
-                                                        <asp:DropDownList ID="ddlTenant" SelectionMode="Multiple" runat="server" CssClass="form-control  form-select" Enabled="true">
+                                                        <asp:DropDownList ID="ddlTenant" SelectionMode="Multiple" runat="server" CssClass="form-control  form-select" Enabled="true"  AutoPostBack="true" OnSelectedIndexChanged="ddlTenant_SelectedIndexChanged" >
                                                         </asp:DropDownList>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="txtbuildingtype">Bill Type</label>
-                                                    <div class="form-control-wrap ">
-                                                        <asp:DropDownList ID="ddlUnit" runat="server" SelectionMode="Multiple" CssClass="form-control  form-select" Enabled="true">
-                                                        </asp:DropDownList>
+                               
 
+                                                <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="ddlBillType">Bill Type</label>
+                                                    <div class="form-control-wrap ">
+                                                        <asp:DropDownList ID="ddlBillType" runat="server"  CssClass="form-control  form-select" Enabled="true"   >
+                                                           <asp:ListItem Value="0">Select Bill </asp:ListItem>
+                                                            <asp:ListItem>Rent </asp:ListItem>
+                                                            <asp:ListItem>Electricity</asp:ListItem>
+                                                             <asp:ListItem>Water</asp:ListItem>
+                                                             <asp:ListItem>Repairs</asp:ListItem>
+                                                            <asp:ListItem>Management Fees</asp:ListItem>
+                                                           
+                                                          
+                                                        </asp:DropDownList>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,7 +135,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <asp:Button ID="btnSubmit" runat="server" Text="Generate Invoice" class="btn btn-lg btn-primary"  />
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Generate Invoice" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click"  />
                                                     <asp:Button ID="btnDelete" runat="server" Text="Terminate " Visible="false" class="btn btn-lg btn-danger" />
                                                 </div>
                                             </div>
