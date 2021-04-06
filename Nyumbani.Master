@@ -187,10 +187,10 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add Tenant Contract</span></a>
+                                            <a href="AddTenantContract.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Tenant Contract</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View Contract</span></a>
+                                            <a href="ViewTenantContracts.aspx" class="nk-menu-link"><span class="nk-menu-text">View Contract</span></a>
                                         </li>
 
                                     </ul>

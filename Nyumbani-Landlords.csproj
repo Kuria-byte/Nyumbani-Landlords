@@ -165,6 +165,7 @@
     <Content Include="ErrorLog.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GenerateInvoice.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -2635,6 +2636,13 @@
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmailTemplates\clEmailTemplates.cs" />
+    <Compile Include="GenerateInvoice.aspx.cs">
+      <DependentUpon>GenerateInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateInvoice.aspx.designer.cs">
+      <DependentUpon>GenerateInvoice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

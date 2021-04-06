@@ -190,30 +190,21 @@ namespace Nyumbani_Landlords
                     }
                     else
                     {
-                        //unit.UnitID = Convert.ToInt32(Request.QueryString["id"]);
-                        //success = ClassLibrary_PropertyManager.Controller.cUnit.UpdateUnit(unit);
-                        //divMsgSuccess.Visible = true;
+                        contract.TenantContractID = Convert.ToInt32(Request.QueryString["id"]);
+                       
+                        success = ClassLibrary_PropertyManager.Controller.cTenantContract.UpdateTenantContract(contract);
+                        divMsgSuccess.Visible = true;
                     }
 
-                    //ddlBuildings.SelectedIndex = 0;
-                    //ddlUnitTypes.SelectedIndex = 0;
-                    //txtPrice.Value = "";
-                    //txtUnitNumber.Value = "";
-                    //txtUnitAddress.Value = "";
-                    //txtFloorLevel.Value = "";
-                    //txtUnitSize.Value = "";
-                    //txtCity.Value = "";
-                    //txtDescription.Value = "";
-                    //txtDescription.Value = "";
-                    //txtBedrooms.Value = "";
-                    //txtBathrooms.Value = "";
-                    //txtKitchen.Value = "";
-                    //txtGarage.Checked = false;
-                    //txtFurnsihing.Checked = false;
-                    //txtAvailable.Checked = false;
 
-
-
+                    ddlTenant.SelectedIndex = 0;
+                    ddlUnit.SelectedIndex = 0;
+                    txtDeposit.Value = "";
+                    txtRent.Value = "";
+                    txtStart.Value = "";
+                    txtEnd.Value = "";
+                    txtStatus.Checked = false;
+        
                 }
 
                 catch (Exception ioExp)
