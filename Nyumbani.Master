@@ -232,10 +232,10 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/components/elements/alerts.html" class="nk-menu-link"><span class="nk-menu-text">Prepare Invoice</span></a>
+                                            <a href="GenerateInvoice.aspx" class="nk-menu-link"><span class="nk-menu-text">Prepare Invoice</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/components/elements/accordions.html" class="nk-menu-link"><span class="nk-menu-text">View Invoices</span></a>
+                                            <a href="ViewInvoice.aspx" class="nk-menu-link"><span class="nk-menu-text">View Invoices</span></a>
                                         </li>
 
 
