@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Nyumbani_Landlords.EmailTemplates;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -11,6 +13,9 @@ namespace Nyumbani_Landlords
 {
     public partial class GenerateInvoice : System.Web.UI.Page
     {
+        private CultureInfo infoCurr;
+
+        private static string fileName = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["LandLordInfo"] == null)
@@ -78,92 +83,117 @@ namespace Nyumbani_Landlords
         {
 
 
-            //if (Page.IsValid)
-            //{
-            //    ClassLibrary_PropertyManager.Model.mTenantContract contract = new ClassLibrary_PropertyManager.Model.mTenantContract();
-            //    int landlordId = Convert.ToInt32(Session["LandLordID"]);
+            if (Page.IsValid)
+            {
+                ClassLibrary_PropertyManager.Model.mInvoice invoice = new ClassLibrary_PropertyManager.Model.mInvoice();
+                int landlordId = Convert.ToInt32(Session["LandLordID"]);
 
-            //    try
-            //    {
+                try
+                {
 
 
-            //        int success = 0;
-            //        contract.TenantID = Convert.ToInt32(ddlTenant.SelectedValue);
-            //        contract.UnitID = Convert.ToInt32(ddlUnit.SelectedValue);
-            //        contract.LandLordID = landlordId;
-            //        contract.TenantDeposit = Convert.ToDouble(txtDeposit.Value.Trim());
-            //        contract.TenantMonthlyRent = Convert.ToDouble(txtRent.Value.Trim());
-
-            //        contract.ContractStartDate = Convert.ToDateTime(txtStart.Value);
-            //        contract.ContractEndDate = Convert.ToDateTime(txtEnd.Value);
-            //        contract.ContractStatusID = txtStatus.Checked;
+                    int success = 0;
+                    invoice.TenantID = Convert.ToInt32(ddlTenant.SelectedValue);
+                    invoice.LandLordID = landlordId;
+                    invoice.InvoiceType = ddlBillType.SelectedValue.Trim();
+                    invoice.InvoiceAmount = Convert.ToDouble(txtAmount.Value.Trim());
+                    invoice.InvoiceNotes = txtNotes.Text.Trim();
+                    invoice.InvoiceDueDate = Convert.ToDateTime(txtDueDate.Value);
+                    invoice.InvoiceReminder = txtStatus.Checked;
 
 
 
 
-            //        if (UploadImage.HasFile)
-            //        {
-            //            fileName = contract.TenantID.ToString() + "-" + contract.UnitID + "-" + UploadImage.FileName.Trim();
+                    if (UploadImage.HasFile)
+                    {
+                        fileName = invoice.InvoiceID.ToString() + "-" + invoice.InvoiceType + "-" + UploadImage.FileName.Trim();
 
-            //            if (File.Exists(Server.MapPath("/ContractImages" + fileName)))
-            //            {
+                        if (File.Exists(Server.MapPath("/InvoiceImages/") + fileName))
+                       
+                        {
 
-            //                File.Delete(Server.MapPath("/ContractImages" + fileName));
-            //                Console.WriteLine("File deleted.");
-            //            }
-            //            UploadImage.SaveAs(Server.MapPath("/ContractImages" + fileName));
-            //            //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + fileName;
+                            File.Delete(Server.MapPath("/InvoiceImages/") + fileName);
+                            Console.WriteLine("File deleted.");
+                        }
+                        UploadImage.SaveAs(Server.MapPath("/InvoiceImages/") + fileName);
 
-
-
-            //        }
-
-            //        contract.AgreementDocoument = fileName;
+                
 
 
 
 
-            //        if (btnSubmit.Text != "Update")
-            //        {
-            //            success = ClassLibrary_PropertyManager.Controller.cTenantContract.AddNewContract(contract);
-            //            divMsgSuccess.Visible = true;
 
-            //        }
-            //        else
-            //        {
-            //            contract.TenantContractID = Convert.ToInt32(Request.QueryString["id"]);
+                    }
 
-            //            success = ClassLibrary_PropertyManager.Controller.cTenantContract.UpdateTenantContract(contract);
-            //            divMsgSuccess.Visible = true;
-            //        }
+                    invoice.InvoiceAttatchments = fileName;
 
 
-            //        ddlTenant.SelectedIndex = 0;
-            //        ddlUnit.SelectedIndex = 0;
-            //        txtDeposit.Value = "";
-            //        txtRent.Value = "";
-            //        txtStart.Value = "";
-            //        txtEnd.Value = "";
-            //        txtStatus.Checked = false;
 
-            //    }
 
-            //    catch (Exception ioExp)
-            //    {
+                    if (btnSubmit.Text != "Update")
+                    {
+                        success = ClassLibrary_PropertyManager.Controller.cInvoice.AddNewInvoice(invoice);
+                      
 
-            //        using (StreamWriter sw = new StreamWriter(Global.ErrorFilePath, true))
-            //        { // If file exists, text will be appended ; otherwise a new file will be created
-            //            sw.Write(string.Format("Message: {0}<br />{1}StackTrace :{2}{1}Date :{3}{1}-----------------------------------------------------------------------------{1}",
-            //              ioExp.Message, Environment.NewLine, ioExp.StackTrace, DateTime.Now.ToString()));
-            //        }
-            //        divMsgError.Visible = true;
-            //    }
-            //    finally
-            //    {
-            //        contract = null;
+                        if (success > 0)
+                        {
+                            string[] strTenant = ddlTenant.SelectedItem.Text.Split('-');
+                            string TenantName = strTenant[0];
 
-            //    }
-            //}
+                         
+
+                            string strEmailMessage = clEmailTemplates.SendTenantInvoice(TenantName, ddlBillType.SelectedValue.Trim(), txtAmount.Value, UploadImage.PostedFile.FileName, txtDueDate.Value, txtNotes.Text  );
+
+                            DataTable dtTenant = ClassLibrary_PropertyManager.Controller.cTenant.GetTenantByTenantID(Convert.ToInt32( ddlTenant.SelectedValue));
+ 
+                            ClassLibrary_PropertyManager.UtilityClasses.ucEmailManagement.SendTenantInvoice(dtTenant.Rows[0]["TenantEmail"].ToString(), strEmailMessage);
+
+
+
+                            divMsgSuccess.Visible = true;
+                            //email.InnerHtml = txtEmail.Text.Trim();
+                           
+
+
+                        }
+
+
+                    }
+                    else
+                    {
+                        invoice.InvoiceID = Convert.ToInt32(Request.QueryString["id"]);
+
+                        //success = ClassLibrary_PropertyManager.Controller.cTenantContract.UpdateTenantContract(contract);
+                        //divMsgSuccess.Visible = true;
+                    }
+
+
+                    ddlTenant.SelectedIndex = 0;
+                    ddlBillType.SelectedIndex = 0;
+                    txtAmount.Value = "";
+                    txtDueDate.Value = "";
+                    txtNotes.Text = "";
+               
+                    txtStatus.Checked = false;
+
+                }
+
+                catch (Exception ioExp)
+                {
+
+                    using (StreamWriter sw = new StreamWriter(Global.ErrorFilePath, true))
+                    { // If file exists, text will be appended ; otherwise a new file will be created
+                        sw.Write(string.Format("Message: {0}<br />{1}StackTrace :{2}{1}Date :{3}{1}-----------------------------------------------------------------------------{1}",
+                          ioExp.Message, Environment.NewLine, ioExp.StackTrace, DateTime.Now.ToString()));
+                    }
+                    divMsgError.Visible = true;
+                }
+                finally
+                {
+                    invoice = null;
+
+                }
+            }
 
         }
 
@@ -174,16 +204,40 @@ namespace Nyumbani_Landlords
 
             dtTenant = ClassLibrary_PropertyManager.Controller.cTenantContract.GetTenantContractByTenantID(Convert.ToInt32(ddlTenant.SelectedValue));
 
-          if (ddlBillType.SelectedIndex == 1)
+            if (dtTenant.Rows.Count > 0)
             {
-                txtAmount.Value = dtTenant.Rows[0]["TenantMonthlyRent"].ToString();
-            }
-            else
-            {
-                txtAmount.Value = "0" ;
+                if (ddlBillType.SelectedIndex == 1)
+                {
+                    txtAmount.Value = dtTenant.Rows[0]["TenantMonthlyRent"].ToString();
+                }
+                else
+                {
+                    txtAmount.Value = "0";
+                }
             }
 
+         
+
         
+        }
+
+        protected void ddlBillType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dtTenant = new DataTable();
+
+            dtTenant = ClassLibrary_PropertyManager.Controller.cTenantContract.GetTenantContractByTenantID(Convert.ToInt32(ddlTenant.SelectedValue));
+
+            if (dtTenant.Rows.Count > 0)
+            {
+                if (ddlBillType.SelectedIndex == 1)
+                {
+                    txtAmount.Value = dtTenant.Rows[0]["TenantMonthlyRent"].ToString();
+                }
+                else
+                {
+                    txtAmount.Value = "0";
+                }
+            }
         }
     }
 }

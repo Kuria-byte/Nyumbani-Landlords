@@ -60,9 +60,10 @@ namespace Nyumbani_Landlords.EmailTemplates
             string emailFormat = "<p>Hi " + sTenantName + " ,</p>" +
                "<p> Thank you for using Nyumbani Property Management System </p>" +
               "<p> Here's your latest " + sBillType + " bill </p>" +
-               "<p> Your Total Bill for this month is" + sAmount + " Kes, due on " + sDueDate + "  </p>" +
-               "<p> Custom note" + sNotes + " </p>" +
+               "<p> Your Total Bill for this month is " + sAmount + " Kes, due on " + sDueDate + "  </p>" +
+               "<i> Custom note" + sNotes + " </i>" +
                "<p> Kindly clear your bill to avoid interruptions </p>" +
+                "<p> Custom note" + sUpload + " </p>" +
 
               "<p> If you have already cleared this bill, please ignore this request.You are welcome to reply to this email with any questions or feedback you might have.</p>" +
               

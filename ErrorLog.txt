@@ -380,3 +380,36 @@ StackTrace :   at System.Web.UI.DataBinder.GetPropertyValue(Object container, St
    at Nyumbani_Landlords.ViewTenantContracts.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\ViewTenantContracts.aspx.cs:line 37
 Date :5/4/2021 12:09:42 PM
 -----------------------------------------------------------------------------
+Message: The given path's format is not supported.<br />
+StackTrace :   at System.Security.Util.StringExpressionSet.CanonicalizePath(String path, Boolean needFullPath)
+   at System.Security.Util.StringExpressionSet.CreateListFromExpressions(String[] str, Boolean needFullPath)
+   at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+   at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String path)
+   at System.Web.InternalSecurityPermissions.PathDiscovery(String path)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at Nyumbani_Landlords.GenerateInvoice.btnSubmit_Click(Object sender, EventArgs e)
+Date :12/4/2021 6:10:18 PM
+-----------------------------------------------------------------------------
+Message: The given path's format is not supported.<br />
+StackTrace :   at System.Security.Util.StringExpressionSet.CanonicalizePath(String path, Boolean needFullPath)
+   at System.Security.Util.StringExpressionSet.CreateListFromExpressions(String[] str, Boolean needFullPath)
+   at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+   at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String path)
+   at System.Web.InternalSecurityPermissions.PathDiscovery(String path)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at Nyumbani_Landlords.GenerateInvoice.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\GenerateInvoice.aspx.cs:line 111
+Date :12/4/2021 6:11:49 PM
+-----------------------------------------------------------------------------
+Message: The given path's format is not supported.<br />
+StackTrace :   at System.Security.Util.StringExpressionSet.CanonicalizePath(String path, Boolean needFullPath)
+   at System.Security.Util.StringExpressionSet.CreateListFromExpressions(String[] str, Boolean needFullPath)
+   at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+   at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String path)
+   at System.Web.InternalSecurityPermissions.PathDiscovery(String path)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at Nyumbani_Landlords.GenerateInvoice.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\GenerateInvoice.aspx.cs:line 111
+Date :12/4/2021 6:13:41 PM
+-----------------------------------------------------------------------------
