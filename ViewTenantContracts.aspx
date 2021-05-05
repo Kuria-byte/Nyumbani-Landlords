@@ -91,6 +91,8 @@
                                             <strong>House Number : </strong><%# Eval("UnitNumber")%>
                                             <br />
                                             <strong>Type : </strong><%# Eval("UnitType")%>
+                                             <br />
+                                            <strong>Type : </strong><%# Eval("UnitType")%>
                                         </ItemTemplate>
 
                                     </asp:TemplateField>

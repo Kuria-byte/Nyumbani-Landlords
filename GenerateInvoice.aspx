@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nyumbani.Master" AutoEventWireup="true" CodeBehind="GenerateInvoice.aspx.cs" Inherits="Nyumbani_Landlords.GenerateInvoice" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- content @s -->
@@ -48,33 +47,33 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtTenantName">Tenant </label>
                                                     <div class="form-control-wrap">
-                                                        <asp:DropDownList ID="ddlTenant" SelectionMode="Multiple" runat="server" CssClass="form-control  form-select" Enabled="true"  AutoPostBack="true" OnSelectedIndexChanged="ddlTenant_SelectedIndexChanged" >
-                                                        </asp:DropDownList>
+                                                        <asp:ListBox  ID="lstTenant" SelectionMode="Multiple" runat="server" CssClass="form-control  form-select" Enabled="true" AutoPostBack="true" OnSelectedIndexChanged="ddlTenant_SelectedIndexChanged" >
+                                                        </asp:ListBox>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="ddlBillType">Invoice Type</label>
+                                                    <div class="form-control-wrap ">
+                                                        <asp:ListBox ID="ddlBillType" runat="server" CssClass="form-control  form-select" Enabled="true" AutoPostBack="true" OnSelectedIndexChanged="ddlBillType_SelectedIndexChanged" SelectionMode="Multiple">
+                                                            <asp:ListItem Value="0">Select Bill </asp:ListItem>
+                                                            <asp:ListItem>Rent </asp:ListItem>
+                                                            <asp:ListItem>Electricity</asp:ListItem>
+                                                            <asp:ListItem>Water</asp:ListItem>
+                                                            <asp:ListItem>Repairs</asp:ListItem>
+                                                            <asp:ListItem>Management Fees</asp:ListItem>
+
+
+                                                        </asp:ListBox>
+
+
                                                     </div>
                                                 </div>
                                             </div>
                                
-
-                                                <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="ddlBillType">Invoice Type</label>
-                                                    <div class="form-control-wrap ">
-                                                        <asp:DropDownList ID="ddlBillType" runat="server"  CssClass="form-control  form-select" Enabled="true" AutoPostBack="true" OnSelectedIndexChanged="ddlBillType_SelectedIndexChanged" >
-                                                           <asp:ListItem Value="0">Select Bill </asp:ListItem>
-                                                            <asp:ListItem>Rent </asp:ListItem>
-                                                            <asp:ListItem>Electricity</asp:ListItem>
-                                                             <asp:ListItem>Water</asp:ListItem>
-                                                             <asp:ListItem>Repairs</asp:ListItem>
-                                                            <asp:ListItem>Management Fees</asp:ListItem>
-                                                           
-                                                          
-                                                        </asp:DropDownList>
-                                                      
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtAmount">Amount</label>
@@ -85,7 +84,7 @@
                                             </div>
 
 
-                                           <div class="col-md-6">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtDueDate">Due Date</label>
                                                     <div class="form-control-wrap">
@@ -97,17 +96,17 @@
                                                 </div>
                                             </div>
 
-                                                <div class="col-md-12">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtNotes">Notes</label>
                                                     <div class="form-control-wrap">
-                                                        <asp:TextBox ID="txtNotes" CssClass="form-control" style="width: 100%" TextMode="MultiLine" runat="server"></asp:TextBox>
-                                                        
+                                                        <asp:TextBox ID="txtNotes" CssClass="form-control" Style="width: 100%" TextMode="MultiLine" runat="server"></asp:TextBox>
+
                                                     </div>
                                                 </div>
                                             </div>
-                                       
-                         
+
+
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label" for="customFile">Attatchments</label>
@@ -135,7 +134,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <asp:Button ID="btnSubmit" runat="server" Text="Generate Invoice" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click"  />
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Generate Invoice" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
                                                     <asp:Button ID="btnDelete" runat="server" Text="Terminate " Visible="false" class="btn btn-lg btn-danger" />
                                                 </div>
                                             </div>

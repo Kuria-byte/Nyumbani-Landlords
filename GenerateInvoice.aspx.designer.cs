@@ -33,13 +33,13 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMsgError;
 
         /// <summary>
-        /// ddlTenant control.
+        /// lstTenant control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTenant;
+        protected global::System.Web.UI.WebControls.ListBox lstTenant;
 
         /// <summary>
         /// ddlBillType control.
@@ -48,7 +48,7 @@ namespace Nyumbani_Landlords
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBillType;
+        protected global::System.Web.UI.WebControls.ListBox ddlBillType;
 
         /// <summary>
         /// txtAmount control.

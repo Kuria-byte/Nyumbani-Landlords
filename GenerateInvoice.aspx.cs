@@ -60,21 +60,21 @@ namespace Nyumbani_Landlords
 
             dtTenant = ClassLibrary_PropertyManager.Controller.cTenant.GetTenantByLandLordID(_LandLordID);
 
-            ddlTenant.Items.Clear();
+            lstTenant.Items.Clear();
             if (dtTenant.Rows.Count > 0)
             {
-                ddlTenant.Enabled = true;
+                //lstTenant.Enabled = true;
                 foreach (DataRow row in dtTenant.Rows)
                 {
-                    ddlTenant.Items.Add(new ListItem() { Text = row["TenantName"].ToString() + "-" + row["TenantNationalID"].ToString() + "-" + row["TenantOccupation"].ToString() + "-" + row["TenantCompany"].ToString(), Value = row["TenantID"].ToString() });
+                    lstTenant.Items.Add(new ListItem() { Text = row["TenantName"].ToString() + "-" + row["TenantNationalID"].ToString() + "-" + row["TenantOccupation"].ToString() + "-" + row["TenantCompany"].ToString(), Value = row["TenantID"].ToString() });
                 }
             }
             else
             {
-                ddlTenant.Enabled = false;
+                lstTenant.Enabled = false;
             }
 
-            ddlTenant.Items.Insert(0, new ListItem("Select Tenant", "0"));
+            lstTenant.Items.Insert(0, new ListItem("Select Tenant", "0"));
             dtTenant = null;
 
         }
@@ -93,13 +93,14 @@ namespace Nyumbani_Landlords
 
 
                     int success = 0;
-                    invoice.TenantID = Convert.ToInt32(ddlTenant.SelectedValue);
+                    invoice.TenantID = Convert.ToInt32(lstTenant.SelectedValue);
                     invoice.LandLordID = landlordId;
                     invoice.InvoiceType = ddlBillType.SelectedValue.Trim();
                     invoice.InvoiceAmount = Convert.ToDouble(txtAmount.Value.Trim());
                     invoice.InvoiceNotes = txtNotes.Text.Trim();
                     invoice.InvoiceDueDate = Convert.ToDateTime(txtDueDate.Value);
                     invoice.InvoiceReminder = txtStatus.Checked;
+                    invoice.InvoiceStatus = 0;
 
 
 
@@ -137,14 +138,14 @@ namespace Nyumbani_Landlords
 
                         if (success > 0)
                         {
-                            string[] strTenant = ddlTenant.SelectedItem.Text.Split('-');
+                            string[] strTenant = lstTenant.SelectedItem.Text.Split('-');
                             string TenantName = strTenant[0];
 
                          
 
                             string strEmailMessage = clEmailTemplates.SendTenantInvoice(TenantName, ddlBillType.SelectedValue.Trim(), txtAmount.Value, UploadImage.PostedFile.FileName, txtDueDate.Value, txtNotes.Text  );
 
-                            DataTable dtTenant = ClassLibrary_PropertyManager.Controller.cTenant.GetTenantByTenantID(Convert.ToInt32( ddlTenant.SelectedValue));
+                            DataTable dtTenant = ClassLibrary_PropertyManager.Controller.cTenant.GetTenantByTenantID(Convert.ToInt32( lstTenant.SelectedValue));
  
                             ClassLibrary_PropertyManager.UtilityClasses.ucEmailManagement.SendTenantInvoice(dtTenant.Rows[0]["TenantEmail"].ToString(), strEmailMessage);
 
@@ -168,7 +169,7 @@ namespace Nyumbani_Landlords
                     }
 
 
-                    ddlTenant.SelectedIndex = 0;
+                    lstTenant.SelectedIndex = 0;
                     ddlBillType.SelectedIndex = 0;
                     txtAmount.Value = "";
                     txtDueDate.Value = "";
@@ -202,18 +203,24 @@ namespace Nyumbani_Landlords
         {
             DataTable dtTenant = new DataTable();
 
-            dtTenant = ClassLibrary_PropertyManager.Controller.cTenantContract.GetTenantContractByTenantID(Convert.ToInt32(ddlTenant.SelectedValue));
-
+            if ((lstTenant.SelectedValue) != "")
+            {
+                dtTenant = ClassLibrary_PropertyManager.Controller.cTenantContract.GetTenantContractByTenantID(Convert.ToInt32(lstTenant.SelectedValue));
+            }
+            else
+            {
+                Response.Redirect("GenerateInvoice.aspx");
+            }
             if (dtTenant.Rows.Count > 0)
             {
                 if (ddlBillType.SelectedIndex == 1)
                 {
                     txtAmount.Value = dtTenant.Rows[0]["TenantMonthlyRent"].ToString();
                 }
-                else
-                {
-                    txtAmount.Value = "0";
-                }
+                //else
+                //{
+                //    txtAmount.Value = "0";
+                //}
             }
 
          
@@ -224,11 +231,18 @@ namespace Nyumbani_Landlords
         protected void ddlBillType_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dtTenant = new DataTable();
+            if ((lstTenant.SelectedValue) != "")
+            {
+                dtTenant = ClassLibrary_PropertyManager.Controller.cTenantContract.GetTenantContractByTenantID(Convert.ToInt32(lstTenant.SelectedValue));
+            }else
+            {
+                Response.Redirect("GenerateInvoice.aspx");
+            }
 
-            dtTenant = ClassLibrary_PropertyManager.Controller.cTenantContract.GetTenantContractByTenantID(Convert.ToInt32(ddlTenant.SelectedValue));
+            
 
             if (dtTenant.Rows.Count > 0)
-            {
+            {                                                                                             
                 if (ddlBillType.SelectedIndex == 1)
                 {
                     txtAmount.Value = dtTenant.Rows[0]["TenantMonthlyRent"].ToString();

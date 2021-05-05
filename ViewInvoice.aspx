@@ -1,17 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nyumbani.Master" AutoEventWireup="true" CodeBehind="ViewInvoice.aspx.cs" Inherits="Nyumbani_Landlords.ViewInvoice" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <script>
+    <script>
         $(function () {
             $('[id*=GridView1]').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable({
                 "responsive": true,
                 "sPaginationType": "full_numbers"
             });
         });
-        </script>
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
+
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
@@ -69,10 +70,7 @@
                                         DataTextField="InvoiceID" NavigateUrl="GenerateInvoice.aspx" />
 
                                     <asp:BoundField HeaderText="Invoice " DataField="InvoiceType" />
-
-                                    <asp:BoundField HeaderText="Amount Due" DataField="InvoiceAmount" DataFormatString="{0:C}"/>
-
-                                    <asp:TemplateField HeaderText="Tenant Info">
+                                               <asp:TemplateField HeaderText="Tenant Info">
                                         <ItemTemplate>
 
                                             <strong>Email : </strong><%# Eval("TenantName")%>
@@ -81,9 +79,21 @@
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
-                                    <asp:BoundField HeaderText="Due Date" DataField="InvoiceDueDate" DataFormatString="{0:dd-MM-yyyy}" />
 
-                          
+                                    <asp:BoundField HeaderText="Amount Due" DataField="InvoiceAmount" DataFormatString="{0:C}" />
+
+                         
+                                    <asp:BoundField HeaderText="Due Date" DataField="InvoiceDueDate" DataFormatString="{0:dd-MM-yyyy}" />
+                                     <asp:BoundField HeaderText="Status" DataField="InvoiceStatus"  />
+
+                                    <asp:TemplateField HeaderText="">
+                                        <ItemTemplate>
+
+                                            <asp:Button ID="btnReady" runat="server" class="btn btn-success" Style="max-width:6.8rem;  text-align:center; height: 50px; margin-right: -7rem" ClientIDMode="Static" Text="Paid"  />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
+
 
                                 </Columns>
                                 <EmptyDataTemplate>No Menu items found</EmptyDataTemplate>

@@ -185,6 +185,7 @@ namespace Nyumbani_Landlords
                     if (btnSubmit.Text != "Update")
                     {
                         success = ClassLibrary_PropertyManager.Controller.cTenantContract.AddNewContract(contract);
+                        ClassLibrary_PropertyManager.Controller.cUnit.UpdateUnitAvailability(Convert.ToInt32(ddlUnit.SelectedValue), false);
                         divMsgSuccess.Visible = true;
 
                     }

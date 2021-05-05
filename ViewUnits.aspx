@@ -67,7 +67,7 @@
                                     <asp:HyperLinkField DataNavigateUrlFields="UnitID" HeaderText="Update"
                                         DataNavigateUrlFormatString="AddUpdateUnit.aspx?id={0}"
                                         Text="Edit" NavigateUrl="AddUpdateUnit.aspx" />
-                                           <asp:TemplateField HeaderText="Picture ">
+                                    <asp:TemplateField HeaderText="Picture ">
                                         <ItemTemplate>
                                             <img src='<%# "UnitImages" + "\\" + Eval("UnitPictures") %>' width="100" height="100" />
                                         </ItemTemplate>
@@ -81,29 +81,28 @@
 
                                     <asp:TemplateField HeaderText="Unit Info">
                                         <ItemTemplate>
-                                        
+
                                             <strong>Floor : </strong><%# Eval("FloorLevel")%>
                                             <br />
                                             <strong>Size : </strong><%# Eval("UnitSize")%>
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
-                                   
-                          
-                              
-                                     <asp:TemplateField HeaderText="Unit Address">
+
+
+
+                                    <asp:TemplateField HeaderText="Unit Address">
                                         <ItemTemplate>
                                             <strong>Address :</strong> <%# Eval("UnitAddress")%>
                                             <br />
                                             <strong>City: </strong><%# Eval("UnitCity")%>
-                                           
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
 
-                                       <%--<asp:BoundField HeaderText="Description" DataField="Description" />--%>
+                                    <%--<asp:BoundField HeaderText="Description" DataField="Description" />--%>
 
-                                       <asp:TemplateField HeaderText="Unit Metrics">
+                                    <asp:TemplateField HeaderText="Unit Metrics">
                                         <ItemTemplate>
                                             <strong>Bathroom :</strong> <%# Eval("Bathrooms")%>
                                             <br />
@@ -113,21 +112,24 @@
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
-                                                                
-                                    <asp:BoundField HeaderText="Added on" DataField="UnitAddedOn" />  
-                                    
-                                    
-                                       <asp:TemplateField HeaderText="Ammenities">
+
+                                    <asp:BoundField HeaderText="Added on" DataField="UnitAddedOn" />
+
+
+                                    <asp:TemplateField HeaderText="Ammenities">
                                         <ItemTemplate>
                                             <strong>Garage :</strong> <%# Eval("Garage")%>
                                             <br />
                                             <strong>Furnishing : </strong><%# Eval("Furnishing")%>
-                                        
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
                                    
-                                    <asp:BoundField HeaderText="Available" DataField="Available" />
+                                    <asp:TemplateField HeaderText="Status">
+                                        <ItemTemplate>
+                                            <%# ShowUnitStatus(Eval("Available").ToString()) %>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
 
 
 
@@ -136,9 +138,6 @@
                               <img src='<%# ResolveUrl(global_asax.gShowMenuPicturesFiles + "\\" + Eval("MenuPicture")) %>' width="100" height="100" />
                               </ItemTemplate>
                      </asp:TemplateField>--%>
-
-
-
                                 </Columns>
                                 <EmptyDataTemplate>No Menu items found</EmptyDataTemplate>
 

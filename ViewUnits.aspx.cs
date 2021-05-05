@@ -59,5 +59,22 @@ namespace Nyumbani_Landlords
 
 
         }
+
+        public string ShowUnitStatus(string _status)
+        {
+            string sreturnStatusMsg = "";
+
+            if (_status == "True")
+            {
+                sreturnStatusMsg = "<span class='badge badge-dot badge - dot - xs badge - success' style='color: green' >Available</span>";
+            }
+            else if (_status == "False")
+            {
+                sreturnStatusMsg = "<span class='badge badge-dot badge - dot - xs badge - danger' style='color: purple'>Occupied</span>"; ;
+            }
+            
+
+            return sreturnStatusMsg;
+        }
     }
 }
