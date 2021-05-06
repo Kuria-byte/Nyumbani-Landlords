@@ -66,11 +66,11 @@ namespace Nyumbani_Landlords
 
             if (_status == "True")
             {
-                sreturnStatusMsg = "<span class='badge badge-dot badge - dot - xs badge - success' style='color: green' >Available</span>";
+                sreturnStatusMsg = "<span class='badge badge-success' >Available</span>";
             }
             else if (_status == "False")
             {
-                sreturnStatusMsg = "<span class='badge badge-dot badge - dot - xs badge - danger' style='color: purple'>Occupied</span>"; ;
+                sreturnStatusMsg = "<span class='badge badge-primary'>Occupied</span>"; ;
             }
             
 

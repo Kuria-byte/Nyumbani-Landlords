@@ -9064,17 +9064,17 @@ table.dataTable td.dataTables_empty, table.dataTable th.dataTables_empty { text-
 
 table.dataTable.nowrap th, table.dataTable.nowrap td { white-space: nowrap; }
 
-div.dataTables_wrapper div.dataTables_length label { font-weight: normal; text-align: left; white-space: nowrap; }
+div.dataTables_wrapper div.dataTables_length label { font-weight: normal; text-align: left; white-space: nowrap; display:none;  }
 
 div.dataTables_wrapper div.dataTables_length select { width: auto; display: inline-block; }
 
-div.dataTables_wrapper div.dataTables_length label { display: inline-flex; align-items: center; }
+div.dataTables_wrapper div.dataTables_length label { display: inline-flex; align-items: center; padding-left:1rem; display:none; }
 
 div.dataTables_wrapper div.dataTables_length span { margin-left: .5rem; margin-right: .5rem; }
 
-div.dataTables_wrapper div.dataTables_filter label { font-weight: normal; white-space: nowrap; }
+div.dataTables_wrapper div.dataTables_filter label { font-weight: normal; white-space: nowrap; padding-right: 1rem;  }
 
-div.dataTables_wrapper div.dataTables_filter input { display: inline-block; }
+div.dataTables_wrapper div.dataTables_filter input { display: inline-block;  }
 
 div.dataTables_wrapper div.dataTables_info { padding: .5rem 0; white-space: nowrap; font-size: .75rem; }
 

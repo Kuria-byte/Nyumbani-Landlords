@@ -413,3 +413,13 @@ StackTrace :   at System.Security.Util.StringExpressionSet.CanonicalizePath(Stri
    at Nyumbani_Landlords.GenerateInvoice.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\GenerateInvoice.aspx.cs:line 111
 Date :12/4/2021 6:13:41 PM
 -----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateTenant.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateTenant.aspx.cs:line 60
+   at Nyumbani_Landlords.AddUpdateTenant.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateTenant.aspx.cs:line 33
+Date :6/5/2021 6:53:59 PM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateTenant.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateTenant.aspx.cs:line 60
+   at Nyumbani_Landlords.AddUpdateTenant.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateTenant.aspx.cs:line 33
+Date :6/5/2021 6:56:29 PM
+-----------------------------------------------------------------------------

@@ -11,7 +11,7 @@ namespace Nyumbani_Landlords
 {
 
 
-    public partial class AddUpdateTenant
+    public partial class Editor
     {
 
         /// <summary>
@@ -42,15 +42,6 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtTenantName;
 
         /// <summary>
-        /// ddlOccupation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOccupation;
-
-        /// <summary>
         /// txtNationalID control.
         /// </summary>
         /// <remarks>
@@ -58,6 +49,33 @@ namespace Nyumbani_Landlords
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtNationalID;
+
+        /// <summary>
+        /// Text1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+
+        /// <summary>
+        /// txtCompany control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCompany;
 
         /// <summary>
         /// txtTenantEmail control.
@@ -87,57 +105,39 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
 
         /// <summary>
-        /// txtCompany control.
+        /// Number1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCompany;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number1;
 
         /// <summary>
-        /// UploadImage control.
+        /// Number2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload UploadImage;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number2;
 
         /// <summary>
-        /// imgDisplayPicture control.
+        /// Number3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgDisplayPicture;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number3;
 
         /// <summary>
-        /// txtStatus control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox txtStatus;
-
-        /// <summary>
-        /// btnSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-
-        /// <summary>
-        /// btnContract control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnContract;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

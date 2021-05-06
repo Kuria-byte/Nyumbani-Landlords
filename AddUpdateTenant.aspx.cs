@@ -57,7 +57,8 @@ namespace Nyumbani_Landlords
             string id = Request.QueryString["id"].Trim();
 
             btnSubmit.Text = "Update";
-            btnDelete.Visible = true;
+            //btnDelete.Visible = true;
+            btnContract.Visible = true;
             imgDisplayPicture.Visible = true;
             DataTable dtUnit = (DataTable)Session["dtTenants"];
             foreach (DataRow dr in dtUnit.Rows)
@@ -91,6 +92,8 @@ namespace Nyumbani_Landlords
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+           
+
             if (Page.IsValid)
             {
                 ClassLibrary_PropertyManager.Model.mTenant tenant = new ClassLibrary_PropertyManager.Model.mTenant();

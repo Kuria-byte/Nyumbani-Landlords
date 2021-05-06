@@ -32,11 +32,14 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
+                 
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Manage Units </h3>
                             </div>
+
+                       
                             <!-- /.card-header -->
                             <div class="card-body">
 
@@ -79,7 +82,7 @@
 
 
 
-                                    <asp:TemplateField HeaderText="Unit Info">
+                 <%--                   <asp:TemplateField HeaderText="Unit Info">
                                         <ItemTemplate>
 
                                             <strong>Floor : </strong><%# Eval("FloorLevel")%>
@@ -87,7 +90,7 @@
                                             <strong>Size : </strong><%# Eval("UnitSize")%>
                                         </ItemTemplate>
 
-                                    </asp:TemplateField>
+                                    </asp:TemplateField>--%>
 
 
 
@@ -113,7 +116,7 @@
 
                                     </asp:TemplateField>
 
-                                    <asp:BoundField HeaderText="Added on" DataField="UnitAddedOn" />
+                                <%--    <asp:BoundField HeaderText="Added on" DataField="UnitAddedOn" />--%>
 
 
                                     <asp:TemplateField HeaderText="Ammenities">
@@ -124,7 +127,7 @@
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
-                                   
+
                                     <asp:TemplateField HeaderText="Status">
                                         <ItemTemplate>
                                             <%# ShowUnitStatus(Eval("Available").ToString()) %>

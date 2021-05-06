@@ -3,9 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script>
         $(function () {
-            $('[id*=GridView1]').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable({
+            $('[id*=GridView1]').prepend($("<thead ></thead>").append($(this).find("tr:first"))).DataTable({
                 "responsive": true,
-                "sPaginationType": "full_numbers"
+                "sPaginationType": "full_numbers",
+                "bPaginate": true,
+                "bSort": true,
+                "iDisplayLength": 10,
             });
         });
     </script>
@@ -39,7 +42,7 @@
                                 <h3 class="card-title">Manage Tenants </h3>
                             </div>
                             <!-- /.card-header -->
-                            <div class="card-body">
+                            <div class="card-body" style="margin-top:-2.5rem">
 
                                 <%--  Alerts--%>
                                 <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
@@ -62,58 +65,51 @@
                                     </div>
                                 </div>
                             </div>
-                            <asp:GridView ID="GridView1"  runat="server" AutoGenerateColumns="false" ClientIDMode="Static" class="table table-striped table-bordered ">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" class="table table-striped table-bordered ">
                                 <Columns>
 
                                     <asp:HyperLinkField DataNavigateUrlFields="TenantID" HeaderText="Update"
                                         DataNavigateUrlFormatString="AddUpdateTenant.aspx?id={0}"
-                                        Text="Edit" NavigateUrl="AddUpdateTenant.aspx" />
+                                        Text="Edit" NavigateUrl="AddUpdateTenant.aspx" ItemStyle-Width="15%" />
 
-                                    <asp:TemplateField HeaderText="Picture ">
+                                    <asp:TemplateField HeaderText="Picture " ItemStyle-HorizontalAlign="left" ItemStyle-Width="25%">
                                         <ItemTemplate>
-                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' width="100" height="100" />
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
+                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' style="margin-bottom: 0.4rem;   border-radius: 50%; object-fit: cover; flex: none;" width="65" height="65" />
+                                            <span class="user-name" style="margin-left:0.5rem; font-size:1rem;">
+                                                <strong></strong><%# Eval("TenantName")%>
 
-                                    <asp:BoundField HeaderText="Name" DataField="TenantName" />
-
-                                    <asp:BoundField HeaderText="National ID" DataField="TenantNationalID" />
-
-                                    <asp:TemplateField HeaderText="Contact Info">
-                                        <ItemTemplate>
-
-                                            <strong>Email : </strong><%# Eval("TenantEmail")%>
+                                            </span>
                                             <br />
-                                            <strong>Phone : </strong><%# Eval("TenantPhone")%>
+
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
-                                    <asp:BoundField HeaderText="Previous Address" DataField="TenantHomeAddress" />
 
-                                    <asp:TemplateField HeaderText="Work Info">
+
+                                    <%--   <asp:BoundField HeaderText="National ID" DataField="TenantNationalID" />--%>
+
+                                    <asp:TemplateField HeaderText="Contact Info" ItemStyle-Width="25%">
                                         <ItemTemplate>
+                                           
 
-                                            <strong>Occupation : </strong><%# Eval("TenantOccupation")%>
+                                            <strong class="user-name"  style="font-size:1rem;">Email : </strong><%# Eval("TenantEmail")%>
                                             <br />
-                                            <strong>Company : </strong><%# Eval("TenantCompany")%>
+                                            <strong class="user-name"  style="font-size:1rem;">Phone : </strong><%# Eval("TenantPhone")%>
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
+                            
 
 
-                                    <asp:BoundField HeaderText="Added On" DataField="TenantAddedOn" />
+                                    <asp:BoundField HeaderText="Added On"  DataField="TenantAddedOn" ItemStyle-CssClass="user-name" ItemStyle-Width="13%" />
 
 
-
-                                    <%--  <asp:TemplateField HeaderText="Picture ">
-                           <ItemTemplate>
-                              <img src='<%# ResolveUrl(global_asax.gShowMenuPicturesFiles + "\\" + Eval("MenuPicture")) %>' width="100" height="100" />
-                              </ItemTemplate>
-                     </asp:TemplateField>--%>
-
-                                    <asp:BoundField HeaderText="Status" DataField="Status" />
-
-
+                                    
+                                    <asp:TemplateField HeaderText="Status" ItemStyle-Width="12%">
+                                        <ItemTemplate>
+                                            <%# ShowUnitStatus(Eval("Status").ToString()) %>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
 
                                 </Columns>
                                 <EmptyDataTemplate>No Menu items found</EmptyDataTemplate>

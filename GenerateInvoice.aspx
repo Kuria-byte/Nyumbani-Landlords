@@ -58,7 +58,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="ddlBillType">Invoice Type</label>
                                                     <div class="form-control-wrap ">
-                                                        <asp:ListBox ID="ddlBillType" runat="server" CssClass="form-control  form-select" Enabled="true" AutoPostBack="true" OnSelectedIndexChanged="ddlBillType_SelectedIndexChanged" SelectionMode="Multiple">
+                                                        <asp:ListBox ID="ddlBillType" runat="server" CssClass="form-control  form-select" Enabled="true" AutoPostBack="true" OnSelectedIndexChanged="ddlBillType_SelectedIndexChanged">
                                                             <asp:ListItem Value="0">Select Bill </asp:ListItem>
                                                             <asp:ListItem>Rent </asp:ListItem>
                                                             <asp:ListItem>Electricity</asp:ListItem>

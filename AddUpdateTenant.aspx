@@ -15,6 +15,8 @@
                             </div>
                         </div>
 
+
+
                         <!-- .nk-block -->
                         <div class="nk-block nk-block-lg">
                             <div class="nk-block-head">
@@ -43,7 +45,7 @@
                                 <div class="card-inner">
                                     <div class="form-validate is-alter">
                                         <div class="row g-gs">
-                                        
+
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtTenantName">Full Names </label>
@@ -83,7 +85,7 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtTenantEmail"> Email</label>
+                                                    <label class="form-label" for="txtTenantEmail">Email</label>
                                                     <div class="form-control-wrap">
                                                         <input type="text" class="form-control" id="txtTenantEmail" name="txtUnitNumber" runat="server" placeholder="example@gmail.com" required>
                                                     </div>
@@ -91,13 +93,13 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtPhone"> Phone</label>
+                                                    <label class="form-label" for="txtPhone">Phone</label>
                                                     <div class="form-control-wrap">
                                                         <input type="number" class="form-control" id="txtPhone" runat="server" name="txtaddress" placeholder="0722-123-456" required>
                                                     </div>
                                                 </div>
                                             </div>
-                                             <div class="col-md-6">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtAddress">Current Address</label>
                                                     <div class="form-control-wrap">
@@ -118,8 +120,8 @@
                                             </div>
 
 
-                                           
-                       
+
+
 
 
                                             <div class="col-md-12">
@@ -131,9 +133,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                             <asp:Image ID="imgDisplayPicture" Visible="false" runat="server" style="padding-left: 15px" Height="100px" Width="120px" />
+                                            <asp:Image ID="imgDisplayPicture" Visible="false" runat="server" Style="padding-left: 15px" Height="100px" Width="120px" />
 
-                                                  <div class="col-md-12">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label">Status</label>
                                                     <ul class="custom-control-group g-3 align-center">
@@ -142,15 +144,31 @@
                                                             <label for="txtStatus">Available</label>
 
                                                         </li>
-                                                       
+
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click" />
-                                                    <asp:Button ID="btnDelete" runat="server" Text="Delete" Visible="false" class="btn btn-lg btn-danger" />
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-success" OnClick="btnSubmit_Click" />
+                                                    <%--  <button id="btnLoading" class="btn btn-lg btn-primary" type="button" disabled  style="visibility:hidden " runat="server">
+                                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                        <span>Loading... </span>
+                                                    </button>--%>
+                                                    <asp:Button ID="btnContract" runat="server" Text="Manage contract" Visible="false" class="btn btn-lg btn-primary" />
+
+<%--                                                    <asp:Button ID="btnDelete" runat="server" Text="Delete" Style="float: right" Visible="false" class="btn btn-lg btn-danger" />--%>
+
+                                                    <span  class="btn btn-lg btn-danger" Style="float: right">
+                                                         <em class="icon ni ni-trash"></em>
+                                                    </span>
+                                                 
+
+
+
+
+
                                                 </div>
                                             </div>
                                         </div>
