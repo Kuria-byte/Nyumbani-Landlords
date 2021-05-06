@@ -51,31 +51,13 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtNationalID;
 
         /// <summary>
-        /// Text1 control.
+        /// ddlOccupation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
-
-        /// <summary>
-        /// btnDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
-
-        /// <summary>
-        /// txtCompany control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCompany;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOccupation;
 
         /// <summary>
         /// txtTenantEmail control.
@@ -105,31 +87,22 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
 
         /// <summary>
-        /// Number1 control.
+        /// txtCompany control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCompany;
 
         /// <summary>
-        /// Number2 control.
+        /// contractName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number2;
-
-        /// <summary>
-        /// Number3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contractName;
 
         /// <summary>
         /// Button1 control.
@@ -139,5 +112,14 @@ namespace Nyumbani_Landlords
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

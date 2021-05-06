@@ -37,12 +37,25 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+
+                           <!-- /.tool Tip -->
+                        <div class="example" id="div1" style="margin-bottom: 2rem;" visible="true" runat="server">
                             <div class="card-header">
                                 <h3 class="card-title">Manage Tenants </h3>
                             </div>
+                            <div class="alert alert-fill alert-warning alert-icon" style="background-color: white; height: 4.5rem">
+
+                                <a style="float: right;" href="#" class="btn btn-outline-primary">Add new tenant</a>
+                                <a href="#" style="float: right; margin-right: 1rem;" class="btn btn-outline btn-primary"><em class="icon ni ni-setting"></em><span>Export CSV</span> </a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+
                             <!-- /.card-header -->
-                            <div class="card-body" style="margin-top:-2.5rem">
+                            <div class="card-body" style="margin-top: -2.5rem">
 
                                 <%--  Alerts--%>
                                 <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
@@ -56,6 +69,9 @@
                      
                                     </div>
                                 </div>
+
+
+
                             </div>
 
                             <div class="nk-block-head">
@@ -74,8 +90,8 @@
 
                                     <asp:TemplateField HeaderText="Picture " ItemStyle-HorizontalAlign="left" ItemStyle-Width="25%">
                                         <ItemTemplate>
-                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' style="margin-bottom: 0.4rem;   border-radius: 50%; object-fit: cover; flex: none;" width="65" height="65" />
-                                            <span class="user-name" style="margin-left:0.5rem; font-size:1rem;">
+                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' style="margin-bottom: 0.4rem; border-radius: 50%; object-fit: cover; flex: none;" width="65" height="65" />
+                                            <span class="user-name" style="margin-left: 0.5rem; font-size: 1rem;">
                                                 <strong></strong><%# Eval("TenantName")%>
 
                                             </span>
@@ -90,21 +106,31 @@
 
                                     <asp:TemplateField HeaderText="Contact Info" ItemStyle-Width="25%">
                                         <ItemTemplate>
-                                           
 
-                                            <strong class="user-name"  style="font-size:1rem;">Email : </strong><%# Eval("TenantEmail")%>
+
+                                            <strong class="user-name" style="font-size: 1rem;"> <em class="icon ni ni-mail"></em> Email : </strong><a href=<%# Eval("TenantEmail")%>> <%# Eval("TenantEmail")%> </a>
                                             <br />
-                                            <strong class="user-name"  style="font-size:1rem;">Phone : </strong><%# Eval("TenantPhone")%>
+                                            <strong class="user-name" style="font-size: 1rem;"> <em class="icon ni ni-call-fill"></em>Phone : </strong><%# Eval("TenantPhone")%>
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
-                            
+
+                                        <asp:TemplateField HeaderText="Address" ItemStyle-Width="13%">
+                                        <ItemTemplate>
 
 
-                                    <asp:BoundField HeaderText="Added On"  DataField="TenantAddedOn" ItemStyle-CssClass="user-name" ItemStyle-Width="13%" />
+                                            <strong class="user-name" style="font-size: 1rem;"> <em class="icon ni ni-map-pin-fill"></em> </strong><%# Eval("TenantHomeAddress")%>
+                                     <%--       <br />
+                                            <strong class="user-name" style="font-size: 1rem;"> <em class="icon ni ni-call-fill"></em>Since : </strong><%# Eval("TenantPhone")%>--%>
+                                        </ItemTemplate>
+
+                                    </asp:TemplateField>
 
 
-                                    
+
+
+
+
                                     <asp:TemplateField HeaderText="Status" ItemStyle-Width="12%">
                                         <ItemTemplate>
                                             <%# ShowUnitStatus(Eval("Status").ToString()) %>

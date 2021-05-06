@@ -94,7 +94,7 @@
                                             <a href="AddUpdateBuilding.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Building</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="ViewBuildings.aspx" class="nk-menu-link"><span class="nk-menu-text">View Buildings</span></a>
+                                            <a href="ViewBuildingsTepeater.aspx" class="nk-menu-link"><span class="nk-menu-text">View Buildings</span></a>
                                         </li>
 
                                     </ul>

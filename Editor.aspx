@@ -51,13 +51,13 @@
                                                 <a class="nav-link active" data-toggle="tab" href="#tabItem5"><em class="icon ni ni-user"></em><span>Personal</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" data-toggle="tab" href="#tabItem6"><em class="icon ni ni-lock-alt"></em><span>Contact</span></a>
+                                                <a class="nav-link" data-toggle="tab" href="#tabItem6"><em class="icon ni ni-file-text"></em><span>Contract</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" data-toggle="tab" href="#tabItem7"><em class="icon ni ni-bell"></em><span>Info</span></a>
+                                                <a class="nav-link" data-toggle="tab" href="#tabItem7"><em class="icon ni ni-activity"></em><span>Activity</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" data-toggle="tab" href="#tabItem8"><em class="icon ni ni-link"></em><span>Finish</span></a>
+                                                <a class="nav-link" data-toggle="tab" href="#tabItem8"><em class="icon ni ni-link"></em><span>Save</span></a>
                                             </li>
                                         </ul>
 
@@ -67,125 +67,190 @@
 
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="tabItem5">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtTenantName">Full Names </label>
-                                                        <div class="form-control-wrap">
+                                                <div class="row g-gs">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtTenantName">Full Names </label>
+                                                            <div class="form-control-wrap">
 
-                                                            <input type="text" id="txtTenantName" class="form-control form-control" runat="server" placeholder="Tenant's Name" required>
+                                                                <input type="text" id="txtTenantName" class="form-control form-control" runat="server" placeholder="Tenant's Name" required>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                                <br />
+                                                    <br />
 
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtNationalID">National ID</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="text" class="form-control" id="txtNationalID" name="txtUnitSize" runat="server" placeholder="34201440" required>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtNationalID">National ID</label>
+                                                            <div class="form-control-wrap">
+                                                                <input type="text" class="form-control" id="txtNationalID" name="txtUnitSize" runat="server" placeholder="34201440" required>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <br />
 
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtbuildingtype">Occupation</label>
+                                                            <div class="form-control-wrap ">
+                                                                <asp:DropDownList ID="ddlOccupation" runat="server" CssClass="form-control  form-select" Enabled="true">
+                                                                    <asp:ListItem Value="0">Select occupation </asp:ListItem>
+                                                                    <asp:ListItem>Student </asp:ListItem>
+                                                                    <asp:ListItem>Employed</asp:ListItem>
+                                                                    <asp:ListItem>Employee</asp:ListItem>
+                                                                    <asp:ListItem>Retired</asp:ListItem>
 
-                                                <br />
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtNationalID">Password</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="text" class="form-control" id="Text1" name="txtUnitSize" runat="server" placeholder="*********" disabled>
+                                                                </asp:DropDownList>
+
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <br />
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtNationalID">Email</label>
+                                                            <div class="form-control-wrap">
+                                                                <input type="text" class="form-control" id="txtTenantEmail" name="txtUnitNumber" runat="server" placeholder="example@gmail.com" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <br />
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtPhone">Phone</label>
+                                                            <div class="form-control-wrap">
+                                                                <input type="number" class="form-control" id="txtPhone" runat="server" name="txtaddress" placeholder="0722-123-456" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtAddress">Current Address</label>
+                                                            <div class="form-control-wrap">
+
+                                                                <input type="text" id="txtAddress" class="form-control" runat="server" placeholder="Nairobi" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="txtCompany">Organisation</label>
+                                                            <div class="form-control-wrap">
+                                                                <input type="text" class="form-control" id="txtCompany" name="txtCompany" placeholder="Safaricom" runat="server" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <br />
+
+
+
+
+                                                    <%--                                                <asp:Button ID="btnDelete" data-toggle="tab" href="#tabItem6" Style="margin-left: 1rem" runat="server" Text="Next" Visible="true" class="btn btn-lg btn-primary nav-link" />--%>
                                                 </div>
-
-                                                <br />
-
-                                                <asp:Button ID="btnDelete" data-toggle="tab" href="#tabItem6" Style="margin-left: 1rem" runat="server" Text="Next" Visible="true" class="btn btn-lg btn-primary nav-link" />
                                             </div>
 
                                             <div class="tab-pane" id="tabItem6">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtCompany">Organisation</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="text" class="form-control" id="txtCompany" name="txtCompany" placeholder="Safaricom" runat="server" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
+
+                                                <div class="col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                    <div class="card">
+                                                        <div class="card-inner">
+                                                            <div class="team">
+
+
+                                                                <div class="team-options">
+                                                                </div>
+                                                                <div class="user-card user-card-s2">
+                                                                    <div class="user-avatar md bg-primary">
+                                                                        <span>AB</span>
+                                                                        <div class="status dot dot-lg dot-success"></div>
+                                                                    </div>
+                                                                    <div class="user-info">
+                                                                        <h6 id="contractName" runat="server">Ian Kuria</h6>
+                                                                        <span class="sub-text">Valid</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="team-details">
+                                                                    <p>Mutiara Ville, Cyberjaya Selangor</p>
+                                                                </div>
+                                                                <ul class="team-statistics">
+                                                                    <li><span>20-01-2020</span><span>Starts</span></li>
+                                                                    <li><span>20-12-2020</span><span>End</span></li>
+                                                                    <li><span>35,000</span><span>Rent</span></li>
+                                                                </ul>
+                                                                <div class="team-view">
+                                                                    <a href="html/user-details-regular.html" class="btn btn-block btn-dim btn-primary"><span>Manage Contract</span></a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- .team -->
+                                                        </div>
+                                                        <!-- .card-inner -->
+                                                    </div>
+                                                    <!-- .card -->
+                                                </div>
 
                                                 <br />
-
-
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtTenantEmail">Email</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="text" class="form-control" id="txtTenantEmail" name="txtUnitNumber" runat="server" placeholder="example@gmail.com" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <br />
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtPhone">Phone</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="number" class="form-control" id="txtPhone" runat="server" name="txtaddress" placeholder="0722-123-456" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <br />
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtAddress">Current Address</label>
-                                                        <div class="form-control-wrap">
-
-                                                            <input type="text" id="txtAddress" class="form-control" runat="server" placeholder="Nairobi" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
 
 
                                             <div class="tab-pane" id="tabItem7">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtPhone">Contracts</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="number" class="form-control" id="Number1" runat="server" name="txtaddress" placeholder="0722-123-456" required>
+                                                <div class="bq-note">
+                                                    <div class="bq-note-item">
+                                                        <div class="bq-note-text">
+                                                            <p>  <em class="icon ni ni-arrow-right-fill-c" style="margin-right:1rem;"></em> <strong>Signed Up.</strong> </p>
+                                                        </div>
+                                                        <div class="bq-note-meta">
+                                                            <span class="bq-note-added">Added on <span class="date">November 18, 2021</span> at <span class="time">5:34 PM</span></span>
+                                                            <span class="bq-note-sep sep">|</span>
+                                                            <span class="bq-note-by">By <span>Ian Kuria</span></span>
+                                                            <a href="#" class="link link-sm link-danger">Delete Note</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- .bq-note-item -->
+                                                    <div class="bq-note-item">
+                                                        <div class="bq-note-text">
+                                                           
+                                                   
+                                                            <p>   Paid <strong>20,000 Kes Rent</strong>  </p>
+                                                        </div>
+                                                        <div class="bq-note-meta">
+                                                            <span class="bq-note-added">Added on <span class="date">November 18, 2021</span> at <span class="time">5:34 PM</span></span>
+                                                            <span class="bq-note-sep sep">|</span>
+                                                            <span class="bq-note-by">By <span>Ian Kuria </span></span>
+                                                            <a href="#" class="link link-sm link-danger">Delete Note</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- .bq-note-item -->
+                                                       <div class="bq-note-item">
+                                                        <div class="bq-note-text">
+                                                            <p>  <em class="icon ni ni-arrow-right-fill-c" style="margin-right:1rem;"></em> Requested <strong>repair</strong>  </p>
+                                                        </div>
+                                                        <div class="bq-note-meta">
+                                                            <span class="bq-note-added">Added on <span class="date">November 18, 2021</span> at <span class="time">5:34 PM</span></span>
+                                                            <span class="bq-note-sep sep">|</span>
+                                                            <span class="bq-note-by">By <span>Ian Kuria </span></span>
+                                                            <a href="#" class="link link-sm link-danger">Delete Note</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <br />
-
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtPhone">Status</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="number" class="form-control" id="Number2" runat="server" name="txtaddress" placeholder="0722-123-456" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <br />
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label" for="txtPhone">Bills</label>
-                                                        <div class="form-control-wrap">
-                                                            <input type="number" class="form-control" id="Number3" runat="server" name="txtaddress" placeholder="0722-123-456" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <br />
+                                                <!-- .bq-note -->
                                             </div>
 
 
 
 
-                                            <div class="tab-pane" id="tabItem8">
+                                                <div class="tab-pane" id="tabItem8">
+                                                 
 
-                                                <table class="email-body text-center" ">
+                                                <table class="email-body text-center" style="align-items:center ">
                                                     <tbody>
                                                         <tr>
                                                             <td class="px-3 px-sm-5 pt-3 pt-sm-5 pb-4">
@@ -208,29 +273,27 @@
 
 
 
-<%--                                                <asp:Button ID="Button2" data-toggle="tab" href="#tabItem6" Style="margin-left: 1rem; margin-bottom: 1rem;" runat="server" Text="Delete Record" Visible="true" class="btn btn-lg btn-danger nav-link" />--%>
-
-
-
-                                            </div>
-
-
+                                              <asp:Button ID="Button2" data-toggle="tab" href="#tabItem6" Style="margin-left: 1rem; margin-bottom: 1rem;" runat="server" Text="Delete Record" Visible="true" class="btn btn-lg btn-danger nav-link" />
                                         </div>
 
+
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
 
+
+
+
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 
 
 

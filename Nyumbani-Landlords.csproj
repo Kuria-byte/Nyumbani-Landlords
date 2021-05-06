@@ -2407,6 +2407,7 @@
     <Content Include="Signup.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewBuildings.aspx" />
+    <Content Include="ViewBuildingsRepeater.aspx" />
     <Content Include="ViewInvoice.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="ViewTenantContracts.aspx" />
@@ -2697,6 +2698,13 @@
     </Compile>
     <Compile Include="ViewBuildings.aspx.designer.cs">
       <DependentUpon>ViewBuildings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBuildingsRepeater.aspx.cs">
+      <DependentUpon>ViewBuildingsRepeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBuildingsRepeater.aspx.designer.cs">
+      <DependentUpon>ViewBuildingsRepeater.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewInvoice.aspx.cs">
       <DependentUpon>ViewInvoice.aspx</DependentUpon>

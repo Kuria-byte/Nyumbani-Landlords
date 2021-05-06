@@ -11,7 +11,7 @@ namespace Nyumbani_Landlords
 {
 
 
-    public partial class ViewTenants
+    public partial class ViewBuildingsRepeater
     {
 
         /// <summary>
@@ -42,12 +42,21 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMsgError;
 
         /// <summary>
-        /// GridView1 control.
+        /// spnCustomerRecords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spnCustomerRecords;
+
+        /// <summary>
+        /// Repeater2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater2;
     }
 }
