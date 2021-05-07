@@ -205,7 +205,7 @@
                                                 <div class="bq-note">
                                                     <div class="bq-note-item">
                                                         <div class="bq-note-text">
-                                                            <p>  <em class="icon ni ni-arrow-right-fill-c" style="margin-right:1rem;"></em> <strong>Signed Up.</strong> </p>
+                                                            <p><em class="icon ni ni-arrow-right-fill-c" style="margin-right: 1rem;"></em><strong>Signed Up.</strong> </p>
                                                         </div>
                                                         <div class="bq-note-meta">
                                                             <span class="bq-note-added">Added on <span class="date">November 18, 2021</span> at <span class="time">5:34 PM</span></span>
@@ -217,9 +217,9 @@
                                                     <!-- .bq-note-item -->
                                                     <div class="bq-note-item">
                                                         <div class="bq-note-text">
-                                                           
-                                                   
-                                                            <p>   Paid <strong>20,000 Kes Rent</strong>  </p>
+
+
+                                                            <p><em class="icon ni ni-arrow-right-fill-c" style="margin-right: 1rem;"></em>Paid <strong>20,000 Kes Rent</strong>  </p>
                                                         </div>
                                                         <div class="bq-note-meta">
                                                             <span class="bq-note-added">Added on <span class="date">November 18, 2021</span> at <span class="time">5:34 PM</span></span>
@@ -229,9 +229,9 @@
                                                         </div>
                                                     </div>
                                                     <!-- .bq-note-item -->
-                                                       <div class="bq-note-item">
+                                                    <div class="bq-note-item">
                                                         <div class="bq-note-text">
-                                                            <p>  <em class="icon ni ni-arrow-right-fill-c" style="margin-right:1rem;"></em> Requested <strong>repair</strong>  </p>
+                                                            <p><em class="icon ni ni-arrow-right-fill-c" style="margin-right: 1rem;"></em>Requested <strong>repair</strong>  </p>
                                                         </div>
                                                         <div class="bq-note-meta">
                                                             <span class="bq-note-added">Added on <span class="date">November 18, 2021</span> at <span class="time">5:34 PM</span></span>
@@ -247,53 +247,72 @@
 
 
 
-                                                <div class="tab-pane" id="tabItem8">
-                                                 
+                                            <div class="tab-pane" id="tabItem8">
 
-                                                <table class="email-body text-center" style="align-items:center ">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="px-3 px-sm-5 pt-3 pt-sm-5 pb-4">
-                                                                <img class="w-100px" src="./images/email/kyc-progress.png" alt="In Process">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="px-3 px-sm-5 pb-3 pb-sm-5">
-                                                                <h5 class="text-primary mb-3">Save the information.</h5>
-                                                                <p>Please make sure to save your current information before proceeding. </p>
-                                                            </td>
-
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
+                                                <div class="col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                    <div class="card">
+                                                        <div class="card-inner">
+                                                            <div class="team">
 
 
-                                                <asp:Button ID="Button1" data-toggle="tab" href="#tabItem6" Style="margin-left: 2rem; margin-bottom: 1rem;" runat="server" Text="Save Information" Visible="true" class="btn btn-lg btn-primary nav-link" />
+                                                                <div class="team-options">
+                                                                </div>
+                                                                <div class="user-card user-card-s2">
+                                                                    <div class="user-avatar md bg-primary">
+                                                                         <em class="icon ni ni-save" style="font-size:2rem;"></em>
+                                                                        <div class="status dot dot-lg dot-danger"></div>
+                                                                    </div>
+                                                                    <div class="user-info">
+                                                                        <h6 id="H1" runat="server">Save</h6>
+                                                                        <span class="sub-text">Attention!</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="team-details">
+                                                                    <p>If you have made any changes, please remember to save</p>
+                                                                      
+                                                                </div>
+                                                                <div style="margin-top:2rem;"></div>
+                                                          <%--      <ul class="team-statistics">
+                                                                    <li><span>20-01-2020</span><span>Starts</span></li>
+                                                                    <li><span>20-12-2020</span><span>End</span></li>
+                                                                    <li><span>35,000</span><span>Rent</span></li>
+                                                                </ul>--%>
+                                                                <div class="team-view">
+                                                                    <a href="html/user-details-regular.html" class="btn btn-block btn-dim btn-primary"><span>Save Information</span></a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- .team -->
+                                                        </div>
+                                                        <!-- .card-inner -->
+                                                    </div>
+                                                    <!-- .card -->
+                                                </div>
 
 
 
-                                              <asp:Button ID="Button2" data-toggle="tab" href="#tabItem6" Style="margin-left: 1rem; margin-bottom: 1rem;" runat="server" Text="Delete Record" Visible="true" class="btn btn-lg btn-danger nav-link" />
+                                                <span class="btn btn-lg btn-danger" style="float: right; margin-right: 1.5rem;">
+                                                    <em class="icon ni ni-trash"></em>
+                                                </span>
+                                            </div>
+
+
+
                                         </div>
 
-
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
 
-
-
-
                 </div>
-
             </div>
         </div>
     </div>
-</div>
 
 
 

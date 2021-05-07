@@ -122,7 +122,7 @@
                                                             <li><span>587</span><span>Tenants</span></li>
                                                         </ul>
                                                         <div class="team-view">
-                                                            <a href="html/user-details-regular.html" class="btn btn-block btn-dim btn-primary"><span>Update Building</span></a>
+                                                            <a href="AddUpdateBuilding.aspx?id=<%# DataBinder.Eval(Container.DataItem, "BuildingID") %>"   class="btn btn-block btn-dim btn-primary"><span>Update Building</span></a>
                                                         </div>
                                                     </div>
                                                     <!-- .team -->
@@ -135,7 +135,8 @@
 
                                     </ItemTemplate>
 
-
+                                    https://localhost:44330/AddUpdateBuilding?id=1
+                          
 
 
                                 </asp:Repeater>

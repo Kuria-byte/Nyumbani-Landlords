@@ -423,3 +423,18 @@ StackTrace :   at Nyumbani_Landlords.AddUpdateTenant.LoadDataOnUpdate() in C:\KM
    at Nyumbani_Landlords.AddUpdateTenant.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateTenant.aspx.cs:line 33
 Date :6/5/2021 6:56:29 PM
 -----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :7/5/2021 4:48:59 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :7/5/2021 4:49:27 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :7/5/2021 4:51:13 AM
+-----------------------------------------------------------------------------
