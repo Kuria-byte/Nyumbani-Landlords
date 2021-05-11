@@ -150,13 +150,13 @@
                                             <a href="AddUpdateTenant.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Tenant</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/user-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">Add Employee</span></a>
+                                            <a href="AddUpdateEmployees" class="nk-menu-link"><span class="nk-menu-text">Add Employee</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="ViewTenants.aspx" class="nk-menu-link"><span class="nk-menu-text">View Tenants</span></a>
+                                            <a href="ViewTenants.aspx" class="nk-menu-link"><span class="nk-menu-text">Manage Tenants</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="ViewEmployees.aspx" class="nk-menu-link"><span class="nk-menu-text">View Employees</span></a>
+                                            <a href="ViewEmployees.aspx" class="nk-menu-link"><span class="nk-menu-text">Manage Employees</span></a>
                                         </li>
                                     </ul>
                                     <!-- .nk-menu-sub -->
@@ -169,7 +169,7 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
+                                            <a href="AddBilling.aspx" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View User Bills</span></a>

@@ -21,7 +21,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="./Dashboard.aspx">Home</a></li>
-                            <li class="breadcrumb-item active">Tenannt List</li>
+                            <li class="breadcrumb-item active">Contract List</li>
                         </ol>
                     </div>
                 </div>
@@ -32,12 +32,27 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+
+                        <!-- /.tool Tip -->
+                        <div class="example" id="div1" style="margin-bottom: 2rem;" visible="true" runat="server">
                             <div class="card-header">
                                 <h3 class="card-title">Manage Contracts </h3>
                             </div>
+                            <div class="alert alert-fill alert-warning alert-icon" style="background-color: white; height: 4.5rem">
+                                <div>
+                                    <a style="float: right;" href="#" class="btn btn-outline-primary">Add new contract</a>
+                                </div>
+                                <div>
+                                    <a href="#" style="float: right; margin-right: 1rem;" class="btn btn-outline btn-primary"><em class="icon ni ni-setting"></em><span>Export CSV</span> </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                          
                             <!-- /.card-header -->
-                            <div class="card-body">
+                            <div class="card-body"  style="margin-top: -2.5rem">
 
                                 <%--  Alerts--%>
                                 <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
@@ -63,58 +78,77 @@
                             <asp:GridView ID="GridView1" Width="100%" runat="server" AutoGenerateColumns="false" ClientIDMode="Static" class="table table-striped table-bordered ">
                                 <Columns>
 
-                                    <asp:HyperLinkField DataNavigateUrlFields="TenantContractID" HeaderText="Update"
+                                    <asp:HyperLinkField DataNavigateUrlFields="TenantContractID" HeaderText="Update" ItemStyle-Width="10%"
                                         DataNavigateUrlFormatString="AddTenantContract.aspx?id={0}"
                                         Text="Edit" NavigateUrl="AddTenantContract.aspx" />
 
-                                    
-                                    <asp:TemplateField HeaderText="Picture ">
+                                         <asp:TemplateField HeaderText="Tenant " ItemStyle-HorizontalAlign="left" ItemStyle-Width="20%">
                                         <ItemTemplate>
-                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' width="100" height="100" />
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
+                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' style="margin-bottom: 0.4rem; border-radius: 50%; object-fit: cover; flex: none;" width="65" height="65" />
+                                            <span class="user-name" style="margin-left: 0.5rem; font-size: 1rem;">
+                                                <strong></strong><%# Eval("TenantName")%>
 
-                                    <asp:TemplateField HeaderText="Tenant Info">
-                                        <ItemTemplate>
-
-                                            <strong>Name : </strong><%# Eval("TenantName")%>
+                                            </span>
                                             <br />
-                                            <strong>Phone : </strong><%# Eval("TenantPhone")%>
+
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Status" ItemStyle-Width="12%">
+                                        <ItemTemplate>
+                                            <%# ShowContractValidity(Eval("ContractStatusID").ToString()) %>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
 
-                                       <asp:BoundField HeaderText="Rent" DataField="TenantMonthlyRent" DataFormatString="{0:C}" />
 
                                     <asp:TemplateField HeaderText="Unit Info">
                                         <ItemTemplate>
                                             <strong>House Number : </strong><%# Eval("UnitNumber")%>
                                             <br />
                                             <strong>Type : </strong><%# Eval("UnitType")%>
-                                             <br />
-                                            <strong>Type : </strong><%# Eval("UnitType")%>
+                                         
+                                        </ItemTemplate>
+
+                                    </asp:TemplateField>
+                                               <asp:TemplateField HeaderText="Payment Info" ItemStyle-Width="20%">
+                                        <ItemTemplate>
+                                                       
+                                             <strong class="user-name" style=""></em>Rent: </strong><%# Eval("TenantMonthlyRent","{0:c}")%>
+                                              <br />
+                                            <strong class="user-name" style="padding-bottom:6px"> </em> Deposit: </strong><%# Eval("TenantDeposit","{0:c}")%>
+                                      
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
 
-                                    <asp:BoundField HeaderText="Deposit" DataField="TenantDeposit"  DataFormatString="{0:C}" />
+                                <%--    <asp:TemplateField HeaderText="Status" ItemStyle-Width="12%">
+                                        <ItemTemplate>
+                                            <%# ShowContractRemainingTime(Eval( Convert.ToDateTime("ContractStartDate","ContractEndDate").ToString("yyyy/MM/dd"))) %>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>--%>
 
-                                    <asp:TemplateField HeaderText="Contract Info">
+                               
+
+                   <%--                 <asp:TemplateField HeaderText="Contract Info">
                                         <ItemTemplate>
 
-                                            <strong>Start : </strong><%# Eval("ContractStartDate", "{0:dd-MM-yyyy}")%>
+                                            
                                             <br />
-                                            <strong>End : </strong><%# Eval("ContractEndDate","{0:dd-MM-yyyy}")%>
+                                            <strong>End : </strong><%# Eval("ContractEndDate","{0:MMMM d, yyyy}")%>
                                         </ItemTemplate>
 
+                                    </asp:TemplateField>--%>
+
+                                       <asp:TemplateField HeaderText="Contract" ItemStyle-Width="12%">
+                                        <ItemTemplate>
+                                            <%# ShowContractDocument(Eval("AgreementDocoument").ToString()) %>
+                                        </ItemTemplate>
                                     </asp:TemplateField>
-                                 
 
 
+                                    
 
-                                    <asp:BoundField HeaderText="Download" DataField="AgreementDocoument" />
-
-                                    <asp:BoundField HeaderText="Status" DataField="ContractStatusID" />
+                                    
 
 
 

@@ -88,7 +88,7 @@
 
                                                 <div class="card-inner">
                                                     <div class="team">
-                                                       <%-- <div class="team-status bg-success text-white"><em class="icon ni ni-check-thick"></em></div>--%>
+                                                        <%-- <div class="team-status bg-success text-white"><em class="icon ni ni-check-thick"></em></div>--%>
                                                         <div class="team-options">
                                                             <div class="drodown">
                                                                 <a href="#" class="dropdown-toggle btn btn-sm btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
@@ -96,16 +96,16 @@
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="#"><em class="icon ni ni-focus"></em><span>Manage</span></a></li>
                                                                         <li><a href="#"><em class="icon ni ni-trash"></em><span>Delete</span></a></li>
-                     
-                                                                      
+
+
                                                                     </ul>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="user-card user-card-s2">
                                                             <div class="user-avatar md bg-primary">
-                                                            <%--    <span>IK</span>--%>
-                                                                <em class="icon ni ni-building" style="font-size:2rem;"></em>
+                                                                <%--    <span>IK</span>--%>
+                                                                <em class="icon ni ni-building" style="font-size: 2rem;"></em>
                                                                 <div class="status dot dot-lg dot-success"></div>
                                                             </div>
                                                             <div class="user-info">
@@ -122,7 +122,9 @@
                                                             <li><span>587</span><span>Tenants</span></li>
                                                         </ul>
                                                         <div class="team-view">
-                                                            <a href="AddUpdateBuilding.aspx?id=<%# DataBinder.Eval(Container.DataItem, "BuildingID") %>"   class="btn btn-block btn-dim btn-primary"><span>Update Building</span></a>
+                                                        
+
+                                                            <a href="AddUpdateBuilding.aspx?id=<%# DataBinder.Eval(Container.DataItem, "BuildingID") %>"  class="btn btn-block btn-dim btn-primary"><span>Update Building</span></a>
                                                         </div>
                                                     </div>
                                                     <!-- .team -->
@@ -135,7 +137,6 @@
 
                                     </ItemTemplate>
 
-                                    https://localhost:44330/AddUpdateBuilding?id=1
                           
 
 

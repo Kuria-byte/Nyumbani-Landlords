@@ -62,5 +62,63 @@ namespace Nyumbani_Landlords
 
 
         }
+
+        public string ShowContractRemainingTime(string _startdate, string _endDate)
+        {
+            string sreturnStatusMsg = "";
+            double days = (Convert.ToDateTime(_startdate) - Convert.ToDateTime(_endDate)).TotalDays;
+
+            
+            if (days > 180)
+            {
+                sreturnStatusMsg = "<span class='badge badge-success'>"+days+" days </span>";
+            }
+            else if (days < 90)
+            {
+                sreturnStatusMsg = "<span class='badge badge-danger'>" + days + " days</span>"; 
+            }
+            else
+            {
+                sreturnStatusMsg = "<span class='badge badge-primary'>" + days + " days</span>";
+            }
+
+
+            return sreturnStatusMsg;
+        }
+
+        public string ShowContractValidity(string _status)
+        {
+
+            string sreturnStatusMsg = "";
+
+            if (_status == "True")
+            {
+                sreturnStatusMsg = "<span class='badge badge-primary' >Valid</span>";
+            }
+            else if (_status == "False")
+            {
+                sreturnStatusMsg = "<span class='badge badge-danger'>Expired</span>"; ;
+            }
+
+
+            return sreturnStatusMsg;
+        }
+        public string ShowContractDocument(string _status)
+        {
+
+            string sreturnStatusMsg = "";
+
+            if (_status != "")
+            {
+                sreturnStatusMsg = "<span class='badge badge-secondary' >Download <em class='icon ni ni-file-download'></em> </span>";
+            }
+            else 
+            {
+                sreturnStatusMsg = "<span class='badge badge-danger'>No Documents</span>"; ;
+            }
+
+
+            return sreturnStatusMsg;
+        }
     }
 }

@@ -39,7 +39,7 @@
                     <div class="col-12">
 
                         <!-- /.tool Tip -->
-                        <div class="example" id="div1" style="margin-bottom: 2rem;" visible="true" runat="server">
+                        <div class="example-alert" id="div1" style="margin-bottom: 2rem; display:grid" visible="true" runat="server">
                             <div class="card-header">
                                 <h3 class="card-title">Manage Tenants </h3>
                             </div>

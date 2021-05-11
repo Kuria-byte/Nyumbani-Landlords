@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddBilling.aspx" />
     <Content Include="AddTenantContract.aspx" />
     <Content Include="AddUpdateBuilding.aspx" />
     <Content Include="AddUpdateTenant.aspx" />
@@ -2601,6 +2602,13 @@
     <Content Include="scss\_dashlite_variables.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBilling.aspx.cs">
+      <DependentUpon>AddBilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBilling.aspx.designer.cs">
+      <DependentUpon>AddBilling.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddTenantContract.aspx.cs">
       <DependentUpon>AddTenantContract.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
