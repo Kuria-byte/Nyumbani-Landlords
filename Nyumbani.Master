@@ -268,7 +268,7 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/components/misc/svg-icons.html" class="nk-menu-link">
+                                            <a href="AddAnnouncment.aspx" class="nk-menu-link">
                                                 <span class="nk-menu-text">Add announcment</span>
                                             </a>
                                         </li>

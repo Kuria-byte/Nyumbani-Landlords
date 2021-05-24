@@ -155,8 +155,12 @@ namespace Nyumbani_Landlords
             string id = Request.QueryString["id"].Trim();
 
             btnSubmit.Text = "Update";
-            DataTable dtBuilding = (DataTable)Session["dtBuildings"];
-            foreach (DataRow dr in dtBuilding.Rows)
+
+            DataTable dtBuildings = new DataTable();
+            //DataTable dtBuilding = (DataTable)Session["dtBuildings"];
+            dtBuildings = ClassLibrary_PropertyManager.Controller.cBuilding.GetBuildingByBuildingID(Convert.ToInt32(id));
+
+            foreach (DataRow dr in dtBuildings.Rows)
             {
                 if (dr["BuildingID"].ToString() == id)
                 {

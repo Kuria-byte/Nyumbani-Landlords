@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddAnnouncment.aspx" />
     <Content Include="AddBilling.aspx" />
     <Content Include="AddTenantContract.aspx" />
     <Content Include="AddUpdateBuilding.aspx" />
@@ -2602,6 +2603,13 @@
     <Content Include="scss\_dashlite_variables.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAnnouncment.aspx.cs">
+      <DependentUpon>AddAnnouncment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddAnnouncment.aspx.designer.cs">
+      <DependentUpon>AddAnnouncment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddBilling.aspx.cs">
       <DependentUpon>AddBilling.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2751,6 +2759,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AnnouncmentImages\" />
     <Folder Include="App_Data\" />
     <Folder Include="BuildingImages\" />
     <Folder Include="ContractImages\" />

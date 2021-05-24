@@ -95,6 +95,7 @@ namespace Nyumbani_Landlords
                     int success = 0;
                     invoice.TenantID = Convert.ToInt32(lstTenant.SelectedValue);
                     invoice.LandLordID = landlordId;
+                    
                     invoice.InvoiceType = ddlBillType.SelectedValue.Trim();
                     invoice.InvoiceAmount = Convert.ToDouble(txtAmount.Value.Trim());
                     invoice.InvoiceNotes = txtNotes.Text.Trim();

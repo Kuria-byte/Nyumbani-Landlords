@@ -592,3 +592,165 @@ StackTrace :   at System.Web.UI.DataBinder.GetPropertyValue(Object container, St
    at Nyumbani_Landlords.ViewTenantContracts.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\ViewTenantContracts.aspx.cs:line 39
 Date :11/05/2021 11:10:43
 -----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:18:27 AM
+-----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:18:29 AM
+-----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:18:30 AM
+-----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:18:51 AM
+-----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:18:57 AM
+-----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:19:22 AM
+-----------------------------------------------------------------------------
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br />
+StackTrace :   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ClassLibrary_PropertyManager.Controller.cLandLords.VerifyLandLordInformation(String pLandLordEmail, String pLandLordPassword) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cLandLords.cs:line 102
+   at Nyumbani_Landlords.Login.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\Login.aspx.cs:line 72
+Date :24/5/2021 11:20:09 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 11:27:20 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 11:27:29 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 11:27:36 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 11:28:06 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 11:28:17 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 11:29:37 AM
+-----------------------------------------------------------------------------
+Message: Object reference not set to an instance of an object.<br />
+StackTrace :   at Nyumbani_Landlords.AddUpdateBuilding.LoadDataOnUpdate() in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 159
+   at Nyumbani_Landlords.AddUpdateBuilding.Page_Load(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddUpdateBuilding.aspx.cs:line 34
+Date :24/5/2021 12:29:56 PM
+-----------------------------------------------------------------------------
+Message: Invalid object name 'tblAnnouncments'.<br />
+StackTrace :   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ClassLibrary_PropertyManager.Controller.cAnnouncment.AddNewAnnouncment(mAnnouncment pAnnouncment) in C:\KMFoodOrderingSystem\ClassLibrary_PropertyManager\Controller\cAnnouncment.cs:line 35
+   at Nyumbani_Landlords.AddAnnouncment.btnSubmit_Click(Object sender, EventArgs e) in C:\KMFoodOrderingSystem\Nyumbani-Landlords\Nyumbani-Landlords\AddAnnouncment.aspx.cs:line 126
+Date :24/5/2021 12:52:14 PM
+-----------------------------------------------------------------------------
