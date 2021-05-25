@@ -42,49 +42,40 @@ namespace Nyumbani_Landlords
         protected global::System.Web.UI.WebControls.DropDownList ddlTenant;
 
         /// <summary>
-        /// ddlUnit control.
+        /// ddlBillType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUnit;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBillType;
 
         /// <summary>
-        /// txtDeposit control.
+        /// txtAmountDue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtDeposit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtAmountDue;
 
         /// <summary>
-        /// ddlBillOccurence control.
+        /// ddlRecurrency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBillOccurence;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRecurrency;
 
         /// <summary>
-        /// txtStart control.
+        /// txtDueDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtStart;
-
-        /// <summary>
-        /// ddlNotification control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNotification;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDueDate;
 
         /// <summary>
         /// txtNotes control.

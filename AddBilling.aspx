@@ -53,9 +53,9 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtbuildingtype">Bill</label>
+                                                    <label class="form-label" for="ddlBillType">Bill</label>
                                                     <div class="form-control-wrap ">
-                                                        <asp:DropDownList ID="ddlUnit" runat="server" CssClass="form-control  form-select" Enabled="true">
+                                                        <asp:DropDownList ID="ddlBillType" runat="server" CssClass="form-control  form-select" Enabled="true">
                                                             <asp:ListItem Value="0">Select Bill </asp:ListItem>
                                                             <asp:ListItem>Rent </asp:ListItem>
                                                             <asp:ListItem>Electricity</asp:ListItem>
@@ -71,9 +71,9 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtDeposit">Amount Due</label>
+                                                    <label class="form-label" for="txtAmountDue">Amount Due</label>
                                                     <div class="form-control-wrap">
-                                                        <input type="Number" class="form-control" id="txtDeposit" name="txtDeposit" runat="server" placeholder="e.g Kes 30,000" required>
+                                                        <input type="Number" class="form-control" id="txtAmountDue" name="txtDueAmount" runat="server" placeholder="e.g Kes 30,000" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -81,9 +81,9 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtRent">Recurrency</label>
+                                                    <label class="form-label" for="ddlRecurrency">Recurrency</label>
                                                        <div class="form-control-wrap">
-                                                        <asp:DropDownList ID="ddlBillOccurence" runat="server" CssClass="form-control  form-select" Enabled="true">
+                                                        <asp:DropDownList ID="ddlRecurrency" runat="server" CssClass="form-control  form-select" Enabled="true">
                                                             <asp:ListItem>Monthly </asp:ListItem>
                                                              <asp:ListItem>Quaterly </asp:ListItem>
                                                              <asp:ListItem>Semi-Annually </asp:ListItem>
@@ -95,27 +95,16 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtStart">Due Date</label>
+                                                    <label class="form-label" for="txtDueDate">Due Date</label>
                                                     <div class="form-control-wrap">
                                                         <div class="form-icon form-icon-left">
                                                             <em class="icon ni ni-calendar"></em>
                                                         </div>
-                                                        <input type="text" id="txtStart" class="form-control date-picker" runat="server" data-date-format="yyyy-mm-dd" required>
+                                                        <input type="text" id="txtDueDate" class="form-control date-picker" runat="server" data-date-format="yyyy-mm-dd" required>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="txtEnd">Send Notification</label>
-                                                    <div class="form-control-wrap">
-                                                        <asp:DropDownList ID="ddlNotification" runat="server" CssClass="form-control  form-select" Enabled="true">
-                                                             <asp:ListItem>Now </asp:ListItem>
-                                                            <asp:ListItem>Monthly </asp:ListItem>
-                                                             <asp:ListItem>None </asp:ListItem>
-                                                        </asp:DropDownList>
-                                                    </div>
-                                                </div>
-                                            </div>
+                               
                                                 <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="form-label" for="txtNotes">Notes</label>
@@ -139,23 +128,10 @@
                                             </div>
                                             <asp:Image ID="imgDisplayPicture" Visible="false" runat="server" Style="padding-left: 15px" Height="100px" Width="120px" />
 
-                                        <%--    <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label">Status</label>
-                                                    <ul class="custom-control-group g-3 align-center">
-                                                        <li>
-                                                            <asp:CheckBox ID="txtStatus" Width="16px" runat="server" />
-                                                            <label for="txtStatus">Valid</label>
-
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>--%>
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary"/>
+                                                    <asp:Button ID="btnSubmit" runat="server" Text="Save Information" class="btn btn-lg btn-primary" OnClick="btnSubmit_Click"/>
                                                     <asp:Button ID="btnDelete" runat="server" Text="Terminate " Visible="false" class="btn btn-lg btn-danger" />
                                                 </div>
                                             </div>
