@@ -2411,6 +2411,7 @@
     <Content Include="Site.Master" />
     <Content Include="ViewBuildings.aspx" />
     <Content Include="ViewBuildingsRepeater.aspx" />
+    <Content Include="ViewEmployees.aspx" />
     <Content Include="ViewInvoice.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="ViewTenantContracts.aspx" />
@@ -2729,6 +2730,13 @@
     </Compile>
     <Compile Include="ViewBuildingsRepeater.aspx.designer.cs">
       <DependentUpon>ViewBuildingsRepeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployees.aspx.cs">
+      <DependentUpon>ViewEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEmployees.aspx.designer.cs">
+      <DependentUpon>ViewEmployees.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewInvoice.aspx.cs">
       <DependentUpon>ViewInvoice.aspx</DependentUpon>

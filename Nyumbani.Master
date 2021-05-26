@@ -150,19 +150,19 @@
                                             <a href="AddUpdateTenant.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Tenant</span></a>
                                         </li>
                                         <li class="nk-menu-item">
+                                            <a href="ViewTenants.aspx" class="nk-menu-link"><span class="nk-menu-text">View Tenants</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
                                             <a href="AddUpdateEmployee" class="nk-menu-link"><span class="nk-menu-text">Add Employee</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="ViewTenants.aspx" class="nk-menu-link"><span class="nk-menu-text">Manage Tenants</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="ViewEmployees.aspx" class="nk-menu-link"><span class="nk-menu-text">Manage Employees</span></a>
+                                            <a href="ViewEmployees.aspx" class="nk-menu-link"><span class="nk-menu-text">View Employees</span></a>
                                         </li>
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
                                 <!-- .nk-menu-item -->
-                                             <!-- .nk-menu-item -->
+                                <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-note-add-fill-c"></em></span>
@@ -197,8 +197,8 @@
                                     <!-- .nk-menu-sub -->
                                 </li>
                                 <!-- .nk-menu-item -->
-                   
-                          <!-- .nk-menu-item -->
+
+                                <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-caution-fill"></em></span>
@@ -240,7 +240,7 @@
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
-                           
+
                                 <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">

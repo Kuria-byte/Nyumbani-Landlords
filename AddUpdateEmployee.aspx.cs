@@ -32,7 +32,7 @@ namespace Nyumbani_Landlords
                     if (Request.QueryString["id"] != null)
                     {
 
-                        //LoadDataOnUpdate();
+                        LoadDataOnUpdate();
                     }
 
                 }
@@ -48,6 +48,46 @@ namespace Nyumbani_Landlords
                 finally
                 {
 
+                }
+            }
+
+        }
+
+        private void LoadDataOnUpdate()
+        {
+
+            string id = Request.QueryString["id"].Trim();
+
+            btnSubmit.Text = "Update";
+          
+            imgDisplayPicture.Visible = true;
+            DataTable dtEmployee = ClassLibrary_PropertyManager.Controller.cEmployee.GetEmployeeByEmployeeID(Convert.ToInt32(id));
+
+
+            foreach (DataRow dr in dtEmployee.Rows)
+            {
+                if (dr["EmployeeID"].ToString() == id)
+                {
+
+                    txtName.Value = dr["EmployeeName"].ToString();
+                    ddlOccupation.SelectedValue = dr["EmployeeType"].ToString();
+                    ddlBuilding.SelectedValue = dr["BuildingID"].ToString();
+                    txtPassword.Value = dr["EmployeePassword"].ToString();
+                    txtEmail.Value = dr["EmployeeEmail"].ToString();
+                    txtPhone.Value = dr["EmployeePhone"].ToString();
+                  
+
+                    fileName = dr["EmployeePicture"].ToString();
+
+                    //DispalyMenuPicture.ImageUrl = Global.gShowMenuPicturesFiles + dr["MenuPicture"].ToString();
+                    imgDisplayPicture.ImageUrl = "/EmployeeImages/" + dr["EmployeePicture"].ToString();
+
+                    //RequiredFieldValidator8.Enabled = false;
+
+                    txtStatus.Checked = Convert.ToBoolean(dr["EmployeeStatus"].ToString());
+
+
+                    break;
                 }
             }
 
@@ -133,7 +173,7 @@ namespace Nyumbani_Landlords
                     else
                     {
                         employee.EmployeeID = Convert.ToInt32(Request.QueryString["id"]);
-                        //success = ClassLibrary_PropertyManager.Controller.cTenant.UpdateTenant(tenant);
+                        success = ClassLibrary_PropertyManager.Controller.cEmployee.UpdateEmployee(employee);
                         divMsgSuccess.Visible = true;
                     }
 
@@ -144,8 +184,7 @@ namespace Nyumbani_Landlords
                     txtPassword.Value = "";
                     txtPhone.Value = "";
                     txtStatus.Checked = false;
-
-
+                    imgDisplayPicture.Visible = false;
 
 
 

@@ -31,6 +31,7 @@
                                 <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
                                     <div class="alert alert-fill alert-success alert-icon">
                                         <em class="icon ni ni-check-circle"></em><strong>Employee information saved</strong> successfully
+                                       <%-- <a style="align-self:flex-end; color:black" href="ViewEmployees.aspx">View Info</a>--%>
                                     </div>
                                 </div>
                                 <div class="example-alert" id="divMsgError" visible="false" runat="server">
