@@ -113,6 +113,7 @@
   <ItemGroup>
     <Content Include="AddAnnouncment.aspx" />
     <Content Include="AddBilling.aspx" />
+    <Content Include="AddUpdateEmployee.aspx" />
     <Content Include="AddTenantContract.aspx" />
     <Content Include="AddUpdateBuilding.aspx" />
     <Content Include="AddUpdateTenant.aspx" />
@@ -2617,6 +2618,13 @@
     <Compile Include="AddBilling.aspx.designer.cs">
       <DependentUpon>AddBilling.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddUpdateEmployee.aspx.cs">
+      <DependentUpon>AddUpdateEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUpdateEmployee.aspx.designer.cs">
+      <DependentUpon>AddUpdateEmployee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddTenantContract.aspx.cs">
       <DependentUpon>AddTenantContract.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2764,6 +2772,7 @@
     <Folder Include="BillImages\" />
     <Folder Include="BuildingImages\" />
     <Folder Include="ContractImages\" />
+    <Folder Include="EmployeeImages\" />
     <Folder Include="InvoiceImages\" />
     <Folder Include="TenantImages\" />
     <Folder Include="UnitImages\" />

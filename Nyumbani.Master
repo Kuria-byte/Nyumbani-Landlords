@@ -150,7 +150,7 @@
                                             <a href="AddUpdateTenant.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Tenant</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="AddUpdateEmployees" class="nk-menu-link"><span class="nk-menu-text">Add Employee</span></a>
+                                            <a href="AddUpdateEmployee" class="nk-menu-link"><span class="nk-menu-text">Add Employee</span></a>
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="ViewTenants.aspx" class="nk-menu-link"><span class="nk-menu-text">Manage Tenants</span></a>
@@ -158,6 +158,24 @@
                                         <li class="nk-menu-item">
                                             <a href="ViewEmployees.aspx" class="nk-menu-link"><span class="nk-menu-text">Manage Employees</span></a>
                                         </li>
+                                    </ul>
+                                    <!-- .nk-menu-sub -->
+                                </li>
+                                <!-- .nk-menu-item -->
+                                             <!-- .nk-menu-item -->
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-note-add-fill-c"></em></span>
+                                        <span class="nk-menu-text">Contracts</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="AddTenantContract.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Tenant Contract</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="ViewTenantContracts.aspx" class="nk-menu-link"><span class="nk-menu-text">View Contract</span></a>
+                                        </li>
+
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
@@ -179,41 +197,21 @@
                                     <!-- .nk-menu-sub -->
                                 </li>
                                 <!-- .nk-menu-item -->
-                                <!-- .nk-menu-item -->
+                   
+                          <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-note-add-fill-c"></em></span>
-                                        <span class="nk-menu-text">Contracts</span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-caution-fill"></em></span>
+                                        <span class="nk-menu-text">Complains</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="AddTenantContract.aspx" class="nk-menu-link"><span class="nk-menu-text">Add Tenant Contract</span></a>
+                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="ViewTenantContracts.aspx" class="nk-menu-link"><span class="nk-menu-text">View Contract</span></a>
+                                            <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View User Bills</span></a>
                                         </li>
 
-                                    </ul>
-                                    <!-- .nk-menu-sub -->
-                                </li>
-                                <!-- .nk-menu-item -->
-                                <!-- .nk-menu-item -->
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-calendar-fill"></em></span>
-                                        <span class="nk-menu-text">Notices</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="html/components/misc/svg-icons.html" class="nk-menu-link">
-                                                <span class="nk-menu-text">Add Notice</span>
-                                            </a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/components/misc/nioicon.html" class="nk-menu-link">
-                                                <span class="nk-menu-text">View Notice</span>
-                                            </a>
-                                        </li>
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
@@ -242,24 +240,7 @@
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
-                                <!-- .nk-menu-item -->
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-caution-fill"></em></span>
-                                        <span class="nk-menu-text">Complains</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View User Bills</span></a>
-                                        </li>
-
-                                    </ul>
-                                    <!-- .nk-menu-sub -->
-                                </li>
-                                <!-- .nk-menu-item -->
+                           
                                 <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
