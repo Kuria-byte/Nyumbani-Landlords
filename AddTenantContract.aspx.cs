@@ -127,6 +127,7 @@ namespace Nyumbani_Landlords
                     txtStart.Value = Convert.ToDateTime(dr["ContractStartDate"]).ToString("dd-MM-yyyy");
                     txtEnd.Value = Convert.ToDateTime(dr["ContractEndDate"]).ToString("dd-MM-yyyy");
                     txtStatus.Checked = Convert.ToBoolean(dr["ContractStatusID"].ToString());
+               
 
                     break;
                 }

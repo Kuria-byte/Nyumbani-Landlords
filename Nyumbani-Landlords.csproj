@@ -2409,6 +2409,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Signup.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="ViewAnnouncment.aspx" />
     <Content Include="ViewBuildings.aspx" />
     <Content Include="ViewBuildingsRepeater.aspx" />
     <Content Include="ViewEmployees.aspx" />
@@ -2716,6 +2717,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAnnouncment.aspx.cs">
+      <DependentUpon>ViewAnnouncment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAnnouncment.aspx.designer.cs">
+      <DependentUpon>ViewAnnouncment.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewBuildings.aspx.cs">
       <DependentUpon>ViewBuildings.aspx</DependentUpon>

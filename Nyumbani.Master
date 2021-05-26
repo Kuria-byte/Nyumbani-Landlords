@@ -254,7 +254,7 @@
                                             </a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/components/misc/nioicon.html" class="nk-menu-link">
+                                            <a href="ViewAnnouncment.aspx" class="nk-menu-link">
                                                 <span class="nk-menu-text">View announcments</span>
                                             </a>
                                         </li>
@@ -517,7 +517,7 @@
 
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <!-- Bootstrap 4 -->
-    <%--  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
+<%--      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
     <!-- original  -->
     <script src="./assets/js/bundle.js?ver=2.2.0"></script>
     <script src="./assets/js/scripts.js?ver=2.2.0"></script>

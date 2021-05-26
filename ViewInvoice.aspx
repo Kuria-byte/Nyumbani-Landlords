@@ -34,12 +34,26 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+
+                        <!-- /.tool Tip -->
+                        <div class="example" id="div1" style="margin-bottom: 2rem;" visible="true" runat="server">
                             <div class="card-header">
-                                <h3 class="card-title">Manage Invoice </h3>
+                                <h3 class="card-title">Manage Invoices </h3>
                             </div>
+                            <div class="alert alert-fill alert-warning alert-icon" style="background-color: white; height: 4.5rem">
+                                <%--   <div>
+                                        <a style="float: right;" href="#" class="btn btn-outline-primary">Add new contract</a>
+                                    </div>--%>
+                                <div>
+                                    <a href="#" style="float: right; margin-right: 1rem;" class="btn btn-outline btn-primary"><em class="icon ni ni-setting"></em><span>Export CSV</span> </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card">
                             <!-- /.card-header -->
-                            <div class="card-body">
+                            <div class="card-body" style="margin-top: -2.5rem">
 
                                 <%--  Alerts--%>
                                 <div class="example-alert" id="divMsgSuccess" visible="false" runat="server">
@@ -70,33 +84,59 @@
                                         DataTextField="InvoiceID" NavigateUrl="GenerateInvoice.aspx" />
 
                                     <asp:BoundField HeaderText="Invoice " DataField="InvoiceType" />
-                                               <asp:TemplateField HeaderText="Tenant Info">
-                                        <ItemTemplate>
 
-                                            <strong>Email : </strong><%# Eval("TenantName")%>
+
+                                    <asp:TemplateField HeaderText="Tenant " ItemStyle-HorizontalAlign="left" ItemStyle-Width="20%">
+                                        <ItemTemplate>
+                                            <img src='<%# "TenantImages" + "\\" + Eval("TenantPicture") %>' style="margin-bottom: 0.4rem; border-radius: 50%; object-fit: cover; flex: none;" width="65" height="65" />
+                                            <span class="user-name" style="margin-left: 0.5rem; font-size: 1rem;">
+                                                <strong></strong><%# Eval("TenantName")%>
+
+                                            </span>
                                             <br />
-                                            <strong>Phone : </strong><%# Eval("TenantPhone")%>
+
                                         </ItemTemplate>
 
                                     </asp:TemplateField>
 
-                                    <asp:BoundField HeaderText="Amount Due" DataField="InvoiceAmount" DataFormatString="{0:C}" />
-
-                         
-                                    <asp:BoundField HeaderText="Due Date" DataField="InvoiceDueDate" DataFormatString="{0:dd-MM-yyyy}" />
-                                     <asp:BoundField HeaderText="Status" DataField="InvoiceStatus"  />
-
-                                    <asp:TemplateField HeaderText="">
+                                    <asp:TemplateField HeaderText="Payment Info" ItemStyle-Width="25%">
                                         <ItemTemplate>
 
-                                            <asp:Button ID="btnReady" runat="server" class="btn btn-success" Style="max-width:6.8rem;  text-align:center; height: 50px; margin-right: -7rem" ClientIDMode="Static" Text="Paid"  />
+
+                                            <strong class="user-name" style="font-size: 1rem; padding-right: 3px;"><em class="icon ni ni-coin"></em> Due:</strong>   <%# String.Format("{0:C}",  Eval("InvoiceAmount"))%> </a>
+                                            <br />
+                                            <strong class="user-name" style="font-size: 1rem; padding-right: 3px;"><em class="icon ni ni-money"></em> Paid: </strong><%#String.Format("{0:C}", Eval("AmountPaid"))%>
+                                        </ItemTemplate>
+
+                                    </asp:TemplateField>
+
+                                   
+
+
+                     
+
+                                       <asp:TemplateField HeaderText="Due Date" ItemStyle-Width="12%">
+                                        <ItemTemplate>
+                                            <%# ShowDate( Convert.ToDateTime(Eval("InvoiceDueDate"))) %>
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
 
+                                    <asp:TemplateField HeaderText="Status" ItemStyle-Width="12%">
+                                        <ItemTemplate>
+                                            <%# ShowStatus(Eval("InvoiceStatus").ToString()) %>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
 
+
+                                    <%--  <asp:TemplateField HeaderText="">
+                                        <ItemTemplate>
+
+                                            <asp:Button ID="btnReady" runat="server" class="btn btn-success" Style="max-width: 6.8rem; text-align: center; height: 50px; margin-right: -7rem" ClientIDMode="Static" Text="Paid" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>--%>
                                 </Columns>
-                                <EmptyDataTemplate>No Menu items found</EmptyDataTemplate>
+                                <EmptyDataTemplate>No items found</EmptyDataTemplate>
 
                             </asp:GridView>
                             <%--     </div>--%>

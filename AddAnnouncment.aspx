@@ -52,10 +52,20 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                                      <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="txtTitle">Title</label>
+                                                    <div class="form-control-wrap">
+                                                   <asp:TextBox runat="server" Cssclass="form-control" ID="txtTitle" TextMode="MultiLine" Rows="6"  name="txtAnnouncment"  placeholder="e.g Expected water shortage on Monday 17th" />
+
+                                                        </div>
+                                                </div>
+                                            </div>
+
                         
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="txtDeposit">Message</label>
+                                                    <label class="form-label" for="txtAnnouncment">Message</label>
                                                     <div class="form-control-wrap">
                                                    <asp:TextBox runat="server" Cssclass="form-control" ID="txtAnnouncment" TextMode="MultiLine" Rows="6"  name="txtAnnouncment"  placeholder="e.g Expected water shortage on Monday 17th" />
 

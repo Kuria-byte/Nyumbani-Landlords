@@ -98,6 +98,7 @@ namespace Nyumbani_Landlords
                     
                     invoice.InvoiceType = ddlBillType.SelectedValue.Trim();
                     invoice.InvoiceAmount = Convert.ToDouble(txtAmount.Value.Trim());
+                    invoice.AmountPaid = 0;
                     invoice.InvoiceNotes = txtNotes.Text.Trim();
                     invoice.InvoiceDueDate = Convert.ToDateTime(txtDueDate.Value);
                     invoice.InvoiceReminder = txtStatus.Checked;
@@ -136,8 +137,9 @@ namespace Nyumbani_Landlords
                     {
                         success = ClassLibrary_PropertyManager.Controller.cInvoice.AddNewInvoice(invoice);
                       
+                      
 
-                        if (success > 0)
+                        if (success > 0 & txtStatus.Checked == true)
                         {
                             string[] strTenant = lstTenant.SelectedItem.Text.Split('-');
                             string TenantName = strTenant[0];

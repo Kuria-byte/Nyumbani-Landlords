@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -10,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Nyumbani_Landlords
 {
-    public partial class ViewInvoice : System.Web.UI.Page
+    public partial class ViewAnnouncment : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,25 +21,14 @@ namespace Nyumbani_Landlords
             }
 
 
-            DataTable dtInvoice = new DataTable();
             try
             {
-                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("guz-KE");
-                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("guz-KE");
 
                 if (Session["LandLordInfo"] != null)
                 {
                     int landlordId = Convert.ToInt32(Session["LandLordID"]);
 
-                    dtInvoice = ClassLibrary_PropertyManager.Controller.cInvoice.GetInvoiceByLandLordID(landlordId);
-
-
-                    {
-                        GridView1.DataSource = dtInvoice;
-                        GridView1.DataBind();
-
-                        Session["dtInvoice"] = dtInvoice;
-                    }
+                    getBuildingDetails(landlordId);
 
                 }
             }
@@ -52,38 +40,39 @@ namespace Nyumbani_Landlords
                     sw.Write(string.Format("Message: {0}<br />{1}StackTrace :{2}{1}Date :{3}{1}-----------------------------------------------------------------------------{1}",
                       ioExp.Message, Environment.NewLine, ioExp.StackTrace, DateTime.Now.ToString()));
                 }
-                divMsgError.Visible = true;
+                //divMsgError.Visible = true;
             }
             finally
             {
-                dtInvoice.Dispose();
+                //building = null;
 
             }
+
         }
 
-        public string ShowStatus(string _status)
+        private void getBuildingDetails(int _landlordID)
         {
 
-            string sreturnStatusMsg = "";
 
-            if (_status == "0")
+            int landlordId = Convert.ToInt32(Session["LandLordID"]);
+            DataTable dtAnnouncment = new DataTable();
+            dtAnnouncment = ClassLibrary_PropertyManager.Controller.cAnnouncment.GetAnnouncmentsByLandLordID(landlordId);
+
+
+            if (dtAnnouncment.Rows.Count > 0)
             {
-                sreturnStatusMsg = "<span class='badge badge-danger' >Pending  </span>";
+                Repeater2.DataSource = dtAnnouncment;
+                Repeater2.DataBind();
+
             }
             else
             {
-                sreturnStatusMsg = "<span class='badge badge-success'>Cleared</span>"; ;
+                spnCustomerRecords.Visible = true;
             }
 
 
-            return sreturnStatusMsg;
-        }
 
-        public string ShowDate(DateTime _date)
-        {
-            string newDate = _date.ToString("dd-MMMM-yyyy", new CultureInfo("en-US"));
 
-            return newDate;
         }
     }
 }

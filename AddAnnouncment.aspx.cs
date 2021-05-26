@@ -91,7 +91,8 @@ namespace Nyumbani_Landlords
 
 
                     int success = 0;
-                    announcment.Announcment = txtAnnouncment.Text.Trim();
+                    announcment.AnnouncmentHeader = txtTitle.Text.Trim();
+                    announcment.AnnouncmentBody = txtAnnouncment.Text.Trim();
                     announcment.BuildingID = Convert.ToInt32(ddlBuilding.SelectedValue);
                     announcment.LandLordId = landlordId;
                     announcment.AnnouncmentStatus = true;
