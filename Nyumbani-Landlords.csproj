@@ -467,6 +467,7 @@
     <Content Include="js\vendors\nioapp\nioapp.min.js" />
     <Content Include="js\vendors\prettify.js" />
     <Content Include="Login.aspx" />
+    <Content Include="ManageProfile.aspx" />
     <Content Include="Nyumbani.Master" />
     <Content Include="assets\fonts\DMSans-Bold.eot" />
     <Content Include="assets\fonts\DMSans-Bold.ttf" />
@@ -2688,6 +2689,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProfile.aspx.cs">
+      <DependentUpon>ManageProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageProfile.aspx.designer.cs">
+      <DependentUpon>ManageProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Nyumbani.Master.cs">
       <DependentUpon>Nyumbani.Master</DependentUpon>

@@ -157,7 +157,7 @@
                                         <div class="card-inner">
                                             <div class="card-title-group mb-3">
                                                 <div class="card-title">
-                                                    <h6 class="title">Revebue Statistics</h6>
+                                                    <h6 class="title">Revenue Statistics</h6>
                                                 </div>
                                                 <div class="card-tools">
                                                     <div class="dropdown">
@@ -176,13 +176,13 @@
                                                 <li>
                                                     <div class="title">
                                                         <span class="dot dot-lg sq" data-bg="#6576ff"></span>
-                                                        <span>Total Order</span>
+                                                        <span>Recieved Payment</span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="title">
                                                         <span class="dot dot-lg sq" data-bg="#eb6459"></span>
-                                                        <span>Canceled Order</span>
+                                                        <span>Pending Payment</span>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -250,29 +250,29 @@
                                         <ul class="nk-store-statistics">
                                             <li class="item">
                                                 <div class="info">
-                                                    <div class="title">Orders</div>
-                                                    <div class="count">1,795</div>
+                                                    <div class="title">Contract Valid</div>
+                                                    <div class="count">5</div>
                                                 </div>
                                                 <em class="icon bg-primary-dim ni ni-bag"></em>
                                             </li>
                                             <li class="item">
                                                 <div class="info">
-                                                    <div class="title">Customers</div>
-                                                    <div class="count">2,327</div>
+                                                    <div class="title">Contract Expired</div>
+                                                    <div class="count">2</div>
                                                 </div>
                                                 <em class="icon bg-info-dim ni ni-users"></em>
                                             </li>
                                             <li class="item">
                                                 <div class="info">
-                                                    <div class="title">Products</div>
-                                                    <div class="count">674</div>
+                                                    <div class="title">User Complains</div>
+                                                    <div class="count">1</div>
                                                 </div>
                                                 <em class="icon bg-pink-dim ni ni-box"></em>
                                             </li>
                                             <li class="item">
                                                 <div class="info">
-                                                    <div class="title">Categories</div>
-                                                    <div class="count">68</div>
+                                                    <div class="title">Payment Pending</div>
+                                                    <div class="count">3</div>
                                                 </div>
                                                 <em class="icon bg-purple-dim ni ni-server"></em>
                                             </li>
@@ -283,7 +283,7 @@
                                 <!-- .card -->
                             </div>
                             <!-- .col -->
-                            <div class="col-xxl-8">
+                            <div class="col-xxl-12">
                                 <div class="card card-full">
                                     <div class="card-inner">
                                         <div class="card-title-group">
@@ -294,8 +294,8 @@
                                     </div>
                                     <div class="nk-tb-list mt-n2">
                                         <div class="nk-tb-item nk-tb-head">
-                                            <div class="nk-tb-col"><span>Order No.</span></div>
-                                            <div class="nk-tb-col tb-col-sm"><span>Customer</span></div>
+                                            <div class="nk-tb-col"><span>Payment No.</span></div>
+                                            <div class="nk-tb-col tb-col-sm"><span>Tenant</span></div>
                                             <div class="nk-tb-col tb-col-md"><span>Date</span></div>
                                             <div class="nk-tb-col"><span>Amount</span></div>
                                             <div class="nk-tb-col"><span class="d-none d-sm-inline">Status</span></div>
@@ -306,19 +306,19 @@
                                             </div>
                                             <div class="nk-tb-col tb-col-sm">
                                                 <div class="user-card">
-                                                    <div class="user-avatar sm bg-purple-dim">
-                                                        <span>AB</span>
+                                                    <div class="user-avatar sm bg-warning-dim">
+                                                        <img src="./TenantImages\Ian Kuria-34201440-ian.jpg" alt="">
                                                     </div>
                                                     <div class="user-name">
-                                                        <span class="tb-lead">Abu Bin Ishtiyak</span>
+                                                        <span class="tb-lead">Ian Kuria</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="nk-tb-col tb-col-md">
-                                                <span class="tb-sub">02/11/2020</span>
+                                                <span class="tb-sub">17/05/2021</span>
                                             </div>
                                             <div class="nk-tb-col">
-                                                <span class="tb-sub tb-amount">4,596.75 <span>USD</span></span>
+                                                <span class="tb-sub tb-amount">4,596.75 <span>KES</span></span>
                                             </div>
                                             <div class="nk-tb-col">
                                                 <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
@@ -331,10 +331,10 @@
                                             <div class="nk-tb-col tb-col-sm">
                                                 <div class="user-card">
                                                     <div class="user-avatar sm bg-azure-dim">
-                                                        <span>DE</span>
+                                                        <span>BK</span>
                                                     </div>
                                                     <div class="user-name">
-                                                        <span class="tb-lead">Desiree Edwards</span>
+                                                        <span class="tb-lead">Brian Katela</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -342,7 +342,7 @@
                                                 <span class="tb-sub">02/02/2020</span>
                                             </div>
                                             <div class="nk-tb-col">
-                                                <span class="tb-sub tb-amount">596.75 <span>USD</span></span>
+                                                <span class="tb-sub tb-amount">596.75 <span>KES</span></span>
                                             </div>
                                             <div class="nk-tb-col">
                                                 <span class="badge badge-dot badge-dot-xs badge-danger">Canceled</span>
@@ -355,18 +355,18 @@
                                             <div class="nk-tb-col tb-col-sm">
                                                 <div class="user-card">
                                                     <div class="user-avatar sm bg-warning-dim">
-                                                        <img src="./images/avatar/b-sm.jpg" alt="">
+                                                        <img src="./TenantImages\Romeo Kala-32015689-man.jpg" alt="">
                                                     </div>
                                                     <div class="user-name">
-                                                        <span class="tb-lead">Blanca Schultz</span>
+                                                        <span class="tb-lead">Romeo Kala</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="nk-tb-col tb-col-md">
-                                                <span class="tb-sub">02/01/2020</span>
+                                                <span class="tb-sub">04/05/2021</span>
                                             </div>
                                             <div class="nk-tb-col">
-                                                <span class="tb-sub tb-amount">199.99 <span>USD</span></span>
+                                                <span class="tb-sub tb-amount">3450.99 <span>KES</span></span>
                                             </div>
                                             <div class="nk-tb-col">
                                                 <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
@@ -379,10 +379,10 @@
                                             <div class="nk-tb-col tb-col-sm">
                                                 <div class="user-card">
                                                     <div class="user-avatar sm bg-purple-dim">
-                                                        <span>NL</span>
+                                                        <span>SL</span>
                                                     </div>
                                                     <div class="user-name">
-                                                        <span class="tb-lead">Naomi Lawrence</span>
+                                                        <span class="tb-lead">Shao Lynn </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -390,7 +390,7 @@
                                                 <span class="tb-sub">01/29/2020</span>
                                             </div>
                                             <div class="nk-tb-col">
-                                                <span class="tb-sub tb-amount">1099.99 <span>USD</span></span>
+                                                <span class="tb-sub tb-amount">1099.99 <span>KES</span></span>
                                             </div>
                                             <div class="nk-tb-col">
                                                 <span class="badge badge-dot badge-dot-xs badge-success">Paid</span>
@@ -402,11 +402,11 @@
                                             </div>
                                             <div class="nk-tb-col tb-col-sm">
                                                 <div class="user-card">
-                                                    <div class="user-avatar sm bg-success-dim">
-                                                        <span>CH</span>
+                                                     <div class="user-avatar sm bg-warning-dim">
+                                                        <img src="./TenantImages\Lillian More-8562634-woman.png" alt="">
                                                     </div>
                                                     <div class="user-name">
-                                                        <span class="tb-lead">Cassandra Hogan</span>
+                                                        <span class="tb-lead">Lillian More</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -414,7 +414,7 @@
                                                 <span class="tb-sub">01/29/2020</span>
                                             </div>
                                             <div class="nk-tb-col">
-                                                <span class="tb-sub tb-amount">1099.99 <span>USD</span></span>
+                                                <span class="tb-sub tb-amount">1099.99 <span>KES</span></span>
                                             </div>
                                             <div class="nk-tb-col">
                                                 <span class="badge badge-dot badge-dot-xs badge-warning">Due</span>
@@ -424,7 +424,7 @@
                                 </div>
                                 <!-- .card -->
                             </div>
-                            <div class="col-xxl-4 col-md-8 col-lg-6">
+                            <%--<div class="col-xxl-4 col-md-8 col-lg-6">
                                 <div class="card h-100">
                                     <div class="card-inner">
                                         <div class="card-title-group mb-2">
@@ -515,7 +515,7 @@
                                     <!-- .card-inner -->
                                 </div>
                                 <!-- .card -->
-                            </div>
+                            </div>--%>
                             <!-- .col -->
                         </div>
                         <!-- .row -->

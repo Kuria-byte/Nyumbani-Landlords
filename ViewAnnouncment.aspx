@@ -59,8 +59,6 @@
                                     </div>
                                 </div>
 
-
-
                             </div>
 
                             <div class="nk-block-head">
@@ -79,7 +77,7 @@
 
                                 <ItemTemplate>
 
-                                  
+
                                     <div id="accordion" class="accordion">
 
 
@@ -97,42 +95,26 @@
 
                                     </div>
 
-                                    <%--    <div class="accordion-item">
-                                        <a href="#" class="accordion-head collapsed" data-toggle="collapse" data-target="#accordion-item-3">
-                                            <h6 class="title">What is the relationship </h6>
-                                            <span class="accordion-icon"></span>
-                                        </a>
-                                        <div class="accordion-body collapse" id="accordion-item-3" data-parent="#accordion">
-                                            <div class="accordion-inner">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                            </div>
-                                        </div>
-                                    </div>--%>
+
                                 </ItemTemplate>
-
-
-
-
-
 
                             </asp:Repeater>
 
 
-                            <%--                            <h2 class="lead"><b>   <%# DataBinder.Eval(Container.DataItem, "BuildingName") %></b></h2>
-                           
-                                
-                                <p class="text-muted text-sm"><b>Total Orders: <%# DataBinder.Eval(Container.DataItem, "BuildingCity") %> </b> </p>--%>
+
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
 
 
         </section>
         <!-- /.content -->
     </div>
-    
+
+
+
     <!-- /.content-wrapper -->
 </asp:Content>
