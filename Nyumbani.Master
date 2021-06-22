@@ -206,11 +206,11 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Add User Bill</span></a>
+                                            <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">View Complains</span></a>
                                         </li>
-                                        <li class="nk-menu-item">
+                                   <%--     <li class="nk-menu-item">
                                             <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">View User Bills</span></a>
-                                        </li>
+                                        </li>--%>
 
                                     </ul>
                                     <!-- .nk-menu-sub -->
@@ -264,7 +264,7 @@
                                 <!-- .nk-menu-item -->
 
                                 <!-- .nk-menu-item -->
-                                <li class="nk-menu-item has-sub">
+   <%--                             <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-scan-fill"></em></span>
                                         <span class="nk-menu-text">QR Codes</span>
@@ -282,7 +282,7 @@
                                         </li>
                                     </ul>
                                     <!-- .nk-menu-sub -->
-                                </li>
+                                </li>--%>
                                 <!-- .nk-menu-item -->
                                 <!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
@@ -292,15 +292,15 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/components/misc/svg-icons.html" class="nk-menu-link">
-                                                <span class="nk-menu-text">Add Notice</span>
+                                            <a href="Dashboard.aspx" class="nk-menu-link">
+                                                <span class="nk-menu-text">View Report </span>
                                             </a>
                                         </li>
-                                        <li class="nk-menu-item">
+                                  <%--      <li class="nk-menu-item">
                                             <a href="html/components/misc/nioicon.html" class="nk-menu-link">
                                                 <span class="nk-menu-text">View Notice</span>
                                             </a>
-                                        </li>
+                                        </li>--%>
                                     </ul>
                                     <!-- .nk-menu-sub -->
                                 </li>
@@ -402,7 +402,7 @@
                                                             <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
                                                         </div>
                                                         <div class="nk-notification-content">
-                                                            <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                                            <div class="nk-notification-text">You have recieved a new Tenant <span>Request</span></div>
                                                             <div class="nk-notification-time">2 hrs ago</div>
                                                         </div>
                                                     </div>
@@ -442,7 +442,7 @@
                                             <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                                 <div class="user-card">
                                                     <div class="user-avatar">
-                                                        <span>AB</span>
+                                                        <span>SK</span>
                                                     </div>
                                                     <div class="user-info">
                                                         <span class="lead-text" id="spUserName" runat="server"></span>
@@ -452,9 +452,9 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="html/user-profile-regular.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                                    <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
-                                                    <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                                                    <li><a href="ManageProfile.aspx"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                                   <%-- <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+                                                    <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>--%>
                                                     <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
                                                 </ul>
                                             </div>
@@ -490,7 +490,7 @@
                     <div class="container-fluid">
                         <div class="nk-footer-wrap">
                             <div class="nk-footer-copyright">
-                                &copy; 2020 DashLite. Template by <a href="https://softnio.com" target="_blank">Softnio</a>
+                                &copy; 2021 Nyumbani Property <a href="https://softnio.com" target="_blank">Manager</a>
                             </div>
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">

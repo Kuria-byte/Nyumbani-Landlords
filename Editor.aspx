@@ -73,7 +73,7 @@
                                                             <label class="form-label" for="txtTenantName">Full Names </label>
                                                             <div class="form-control-wrap">
 
-                                                                <input type="text" id="txtTenantName" class="form-control form-control" runat="server" placeholder="Tenant's Name" required>
+                                                                <input type="text" id="txtTenantName" class="form-control form-control" value="Ian Kuria" runat="server" placeholder="Tenant's Name" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -84,7 +84,7 @@
                                                         <div class="form-group">
                                                             <label class="form-label" for="txtNationalID">National ID</label>
                                                             <div class="form-control-wrap">
-                                                                <input type="text" class="form-control" id="txtNationalID" name="txtUnitSize" runat="server" placeholder="34201440" required>
+                                                                <input type="text" class="form-control" id="txtNationalID" name="txtUnitSize" value="34201440" runat="server" placeholder="34201440" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -111,7 +111,7 @@
                                                         <div class="form-group">
                                                             <label class="form-label" for="txtNationalID">Email</label>
                                                             <div class="form-control-wrap">
-                                                                <input type="text" class="form-control" id="txtTenantEmail" name="txtUnitNumber" runat="server" placeholder="example@gmail.com" required>
+                                                                <input type="text" class="form-control" id="txtTenantEmail" name="txtUnitNumber" value="ianmwitumi@gmail.com" runat="server" placeholder="example@gmail.com" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -123,7 +123,7 @@
                                                         <div class="form-group">
                                                             <label class="form-label" for="txtPhone">Phone</label>
                                                             <div class="form-control-wrap">
-                                                                <input type="number" class="form-control" id="txtPhone" runat="server" name="txtaddress" placeholder="0722-123-456" required>
+                                                                <input type="number" class="form-control" id="txtPhone" runat="server" value="0722890450" name="txtaddress" placeholder="0722-123-456" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -133,7 +133,7 @@
                                                             <label class="form-label" for="txtAddress">Current Address</label>
                                                             <div class="form-control-wrap">
 
-                                                                <input type="text" id="txtAddress" class="form-control" runat="server" placeholder="Nairobi" required>
+                                                                <input type="text" id="txtAddress" class="form-control" runat="server" value="Mutiara Ville" placeholder="Nairobi" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -142,7 +142,7 @@
                                                         <div class="form-group">
                                                             <label class="form-label" for="txtCompany">Organisation</label>
                                                             <div class="form-control-wrap">
-                                                                <input type="text" class="form-control" id="txtCompany" name="txtCompany" placeholder="Safaricom" runat="server" required>
+                                                                <input type="text" class="form-control" id="txtCompany" name="txtCompany" value="Limkokwing University" placeholder="Safaricom" runat="server" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -187,7 +187,7 @@
                                                                     <li><span>35,000</span><span>Rent</span></li>
                                                                 </ul>
                                                                 <div class="team-view">
-                                                                    <a href="html/user-details-regular.html" class="btn btn-block btn-dim btn-primary"><span>Manage Contract</span></a>
+                                                                    <a href="ViewTenantContracts.aspx" class="btn btn-block btn-dim btn-primary"><span>Manage Contract</span></a>
                                                                 </div>
                                                             </div>
                                                             <!-- .team -->

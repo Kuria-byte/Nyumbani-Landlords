@@ -135,12 +135,12 @@
 
                                     <asp:TemplateField HeaderText="Status" ItemStyle-Width="12%">
                                         <ItemTemplate>
-                                            <%# ShowUnitStatus(Eval("Status").ToString()) %>
+                                           <a href="Editor.aspx"> <%# ShowUnitStatus(Eval("Status").ToString()) %></a>
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
                                 </Columns>
-                                <EmptyDataTemplate>No Menu items found</EmptyDataTemplate>
+                                <EmptyDataTemplate>No Tenant info found</EmptyDataTemplate>
 
                             </asp:GridView>
                             <%--     </div>--%>
